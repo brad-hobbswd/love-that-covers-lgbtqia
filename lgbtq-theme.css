@@ -95,6 +95,15 @@ p {
   line-height: 1.7;
 }
 
+.hero-text {
+  display: block;
+  color: #4A3B35;
+  max-width: 620px;
+  margin: 20px auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
 /* =========================
    CARD SYSTEM (QUILT PIECES)
 ========================= */
