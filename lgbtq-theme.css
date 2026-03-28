@@ -522,3 +522,28 @@ p {
   line-height: 1.85;
   margin-bottom: 16px;
 }
+
+/* =========================
+   STORIES PAGE ENHANCEMENT
+========================= */
+
+.stories-grid {
+  background: linear-gradient(
+    to bottom,
+    #F4ECE2,
+    #EDE3D6 60%,
+    #F4ECE2
+  );
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+
+/* Slight depth boost */
+.patch {
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Soft variation for special patches */
+.patch.soft {
+  background: #E6D8C8;
+}
