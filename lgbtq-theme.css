@@ -415,3 +415,74 @@ p {
   background: #B8AAA0;
   pointer-events: none;
 }
+
+/* =========================
+   BOOK PAGE BACKGROUND LAYER
+========================= */
+
+.book-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 20px;
+
+  background: linear-gradient(
+    to bottom,
+    #F4ECE2,
+    #EDE3D6 60%,
+    #F4ECE2
+  );
+
+  border-radius: 18px;
+}
+
+/* =========================
+   BOOK CARDS ENHANCED
+========================= */
+
+.book-card-full {
+  width: 100%;
+  max-width: 720px;
+
+  background: linear-gradient(135deg, #EFE1D2, #D8CBB8);
+
+  border-radius: 18px;
+  padding: 26px;
+
+  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
+
+  transition: transform 0.2s ease;
+}
+
+.book-card-full:hover {
+  transform: translateY(-3px);
+}
+
+.book-card-full:nth-child(1) {
+  background: linear-gradient(135deg, #E8D8C3, #D8CBB8);
+}
+
+.book-card-full:nth-child(2) {
+  background: linear-gradient(135deg, #E3D5C8, #CFC2B8);
+}
+
+.book-card-full h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #2F2421;
+}
+
+.book-card-full h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: var(--rainbow);
+}
+
+.book-card-full p {
+  line-height: 1.85;
+  font-size: 1.02rem;
+  letter-spacing: 0.2px;
+}
