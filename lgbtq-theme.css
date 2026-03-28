@@ -591,3 +591,36 @@ p {
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
+/* =========================
+   CONTACT PAGE ENHANCEMENT
+========================= */
+
+.contact-full {
+  width: 100%;
+  max-width: 720px;
+  text-align: left;
+}
+
+/* section variation */
+.contact-full:nth-child(1) {
+  background: linear-gradient(135deg, #EFE1D2, #D8CBB8);
+}
+
+.contact-full:nth-child(2) {
+  background: linear-gradient(135deg, #E3D5C8, #CFC2B8);
+}
+
+.contact-full:nth-child(3) {
+  background: linear-gradient(135deg, #E6D8C8, #D6C7B2);
+}
+
+/* spacing + readability */
+.contact-full p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* link emphasis */
+.resource-card a {
+  color: var(--accent-red);
+}
