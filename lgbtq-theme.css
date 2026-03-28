@@ -486,3 +486,39 @@ p {
   font-size: 1.02rem;
   letter-spacing: 0.2px;
 }
+
+/* =========================
+   ABOUT PAGE ENHANCEMENT
+========================= */
+
+.about-card-full {
+  width: 100%;
+  max-width: 720px;
+
+  background: linear-gradient(135deg, #EFE1D2, #D8CBB8);
+
+  border-radius: 18px;
+  padding: 26px;
+
+  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
+}
+
+.about-card-full h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.about-card-full h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: var(--rainbow);
+}
+
+.about-card-full p {
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
