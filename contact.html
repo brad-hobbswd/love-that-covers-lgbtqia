@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- CONTENT -->
+<section class="book-content">
+
+  <div class="book-section">
+
+    <h2>CONTACT</h2>
+
+    <p class="highlight">
+      You are welcome here. Whether you have a question, a story, or simply need to be heard, this space is open to you.
+    </p>
+
+    <p>
+      If this book has spoken to you, encouraged you, or helped you in any way, I would love to hear from you. Your story matters, and your voice is important.
+    </p>
+
+  </div>
+
+  <!-- CONTACT OPTIONS -->
+  <div class="book-section">
+
+    <h3>Reach Out</h3>
+
+    <div class="resource-card">
+      <p><strong>Email:</strong></p>
+      <p>
+        <a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a>
+      </p>
+    </div>
+
+    <div class="resource-card">
+      <p><strong>Website:</strong></p>
+      <p>
+        <a href="https://brad-hobbswd.github.io/about-me/">
+          Visit My Personal Page
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ENCOURAGEMENT -->
+  <div class="book-section">
+    <p>
+      You are not alone. You are seen. You are chosen. You are deeply loved.
+    </p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
