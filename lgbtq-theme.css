@@ -104,6 +104,11 @@ p {
   line-height: 1.7;
 }
 
+.hero-sub {
+  color: #6B5A52;
+  margin-top: 10px;
+}
+
 /* =========================
    CARD SYSTEM (QUILT PIECES)
 ========================= */
@@ -215,3 +220,5 @@ p {
   background: #E2D6C6;
   border-top: 1px solid rgba(0,0,0,0.05);
 }
+
+
