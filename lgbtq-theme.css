@@ -252,3 +252,11 @@ p {
 .book-section p:has(em) {
   font-style: italic;
 }
+
+.book-section p strong {
+  display: block;
+  margin: 30px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--accent-red);
+}
