@@ -3,25 +3,25 @@
 ========================= */
 
 :root {
-  --bg-main: #1C1C1E;
-  --bg-secondary: #2A2A2E;
+--bg-main: #EDE3D6;       /* warm fabric tone */
+--bg-secondary: #E2D6C6;  /* slightly darker layer */
   --card-bg: #F4EDE4;
 
   --text-main: #F5F5F5;
   --text-secondary: #CFCFCF;
   --text-muted: #9A9A9A;
 
-  --accent-red: #8B1E2D;
+  --accent-red: #A63A3A;
 
   --rainbow: linear-gradient(
-    to right,
-    #C94A4A,
-    #E08A3A,
-    #E6C15A,
-    #5FA777,
-    #4A7FB5,
-    #7A5FA3
-  );
+  to right,
+  #C46A6A,
+  #D89A5B,
+  #E3C46A,
+  #7FAF8F,
+  #6A8FBF,
+  #9A7AC4
+);
 }
 
 /* =========================
@@ -32,7 +32,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-main);
-  color: var(--text-main);
+  color: #3A2E2A;
   line-height: 1.6;
 }
 
@@ -46,7 +46,7 @@ h1, h2, h3 {
 }
 
 p {
-  color: var(--text-secondary);
+  color: #5A4A45;
 }
 
 /* =========================
@@ -94,12 +94,12 @@ p {
 ========================= */
 
 .card {
-  background: #2A2A2E; /* darker fabric tone */
-  color: #F5F5F5; /* light text */
+  background: #D6C7B2; /* darker quilt patch */
+  color: #3A2E2A; /* deep warm brown text */
   border-radius: 12px;
   padding: 20px;
   margin: 20px 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .card p {
