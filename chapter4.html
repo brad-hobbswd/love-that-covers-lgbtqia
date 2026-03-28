@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter Four | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- CHAPTER CONTENT -->
+<section class="book-content">
+
+  <div class="book-section">
+
+    <h2>CHAPTER FOUR</h2>
+    <h3 style="margin-bottom: 30px;">THE KEEPER OF THE QUILT</h3>
+
+    <p>
+      The quilt had become more than fabric and thread. It had become a living testament to God’s unrelenting love, carried in the hands of men who had known rejection, shame, and the quiet ache of feeling unseen. When it reached Adrian, its journey took on a new dimension.
+    </p>
+
+    <p>
+      Adrian had spent most of his life running from judgment, from harsh words that had been whispered or shouted at him, from the belief that he was too much, too different, too unwanted. He had always loved God, but he had never fully believed that God could love him as he was, with all his fears, his doubts, his identity. Each day felt like walking through a storm that no one else could see.
+    </p>
+
+    <p>
+      When Joshua brought the quilt to Adrian, he hesitated. The fabric felt familiar in its weight, yet foreign in its intimacy. Adrian had spent so many years protecting his heart that even kindness felt threatening. But the quilt had a quiet authority, a gentle insistence that he was worthy of care.
+    </p>
+
+    <p>
+      Adrian unfolded it slowly, examining each patch. He saw the deep green square Joshua had added, the sky-blue of Daniel, the soft scraps from Michael. Each piece was a story, a prayer, a declaration that God’s love could not be constrained by human opinion.
+    </p>
+
+    <p><em>
+      “I don’t know if I can believe this,” Adrian whispered, tears threatening to spill. “I don’t know if I deserve this kind of love.”
+    </em></p>
+
+    <p><em>
+      “Adrian, it’s not about what you deserve. God’s love covers everything. Even the places we think are too broken, too stained, too unworthy.”
+    </em></p>
+
+    <p>
+      For the first time, Adrian allowed himself to sit quietly, holding the quilt to his chest. He prayed aloud, his words raw and honest: “Lord, I don’t know how to accept this love. I have spent my life hiding from it, from You, from others. But I want to feel it. I want to believe it. Teach me to let it in.”
+    </p>
+
+    <p>
+      As he spoke, a calm washed over him, a warmth that seemed to flow from the quilt into his heart. The prayers and love of the men who had stitched the fabric, combined with the gentle presence of God, wrapped around him. Adrian wept quietly, not in shame, but in release. Each tear carried away a lifetime of fear, doubt, and self-rejection.
+    </p>
+
+    <p>
+      In the following months, Adrian became a quiet force of healing for others. He visited shelters, community centers, and gatherings of men who had once felt unseen, bringing the quilt with him. He told them the stories of Daniel, Michael, and Joshua, of lives changed through small acts of faith and love. And as he did, he began to see the truth for himself: God’s love was persistent, unstoppable, and wholly restorative.
+    </p>
+
+    <p>
+      One night, Adrian sat alone in the dim glow of his living room, the quilt draped across his lap. He pulled out a piece of fabric he had saved for this moment: a deep violet square, soft and resilient. Carefully, he stitched into it a simple phrase: You are held. You are chosen. You are loved.
+    </p>
+
+    <p>
+      It was a prayer, a promise, and a commitment all at once. When he finished, Adrian knew that the quilt would continue its journey, carrying the stories of men who had once been broken and showing that divine love could, in quiet and persistent ways, cover every wound.
+    </p>
+
+    <p>
+      Adrian had become the keeper of the quilt, and in doing so, he had found the courage to fully embrace the love of God that he had long believed was beyond his reach.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
