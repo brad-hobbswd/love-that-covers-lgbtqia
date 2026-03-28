@@ -340,3 +340,19 @@ p {
   align-items: center;
   gap: 8px;
 }
+.patch {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.patch:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+}
+.patch {
+  transition: all 0.25s ease;
+}
+.patch p {
+  opacity: 0.85;
+}
