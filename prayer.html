@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer of Commitment | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- CONTENT -->
+<section class="book-content">
+
+  <div class="book-section">
+
+    <h2>PRAYER OF COMMITMENT</h2>
+
+    <p>
+      Heavenly Father,
+    </p>
+
+    <p>
+      I come before You today with a heart that longs to be fully known, fully seen, and fully loved. I lay down my fears, my doubts, my shame, and all the places I felt unworthy. Lord, I receive Your love as it is, not as I think it should be, but as it truly is; endless, unchanging, and covers every part of me.
+    </p>
+
+    <p>
+      Love covers a multitude of sin (1 Peter 4:8). Lord, I claim this truth for my life. Heal my heart, restore my spirit, and help me to walk boldly in the knowledge that I am chosen, I am seen, and I am deeply loved by You.
+    </p>
+
+    <p>
+      I commit my life to living in Your love, to allowing it to flow through me to others, to be an instrument of grace, hope, and healing. Teach me to extend forgiveness where I have been hurt, to embrace others with compassion, and to trust that Your love never fails.
+    </p>
+
+    <p>
+      Lord, guide me in every thought, every action, and every decision. Let my life reflect Your mercy, Your truth, and Your unwavering embrace. May I carry Your love into the world, offering it freely, just as You have offered it to me.
+    </p>
+
+    <p>
+      In Jesus’ name, I pray.
+    </p>
+
+    <p><strong>Amen.</strong></p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
