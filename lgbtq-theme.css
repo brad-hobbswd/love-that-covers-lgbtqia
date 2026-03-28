@@ -376,3 +376,42 @@ p {
 .patch:nth-child(5) { background: #D6C7B2; }
 .patch:nth-child(6) { background: #E6D8C8; }
 .patch:nth-child(7) { background: #D9CBB9; }
+
+/* =========================
+   STORE PAGE
+========================= */
+
+.store-book {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.store-book img {
+  width: 260px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.store-info {
+  max-width: 420px;
+}
+
+.store-info h3 {
+  margin-bottom: 10px;
+}
+
+.coming-soon {
+  margin: 15px 0;
+  font-weight: 600;
+  color: var(--accent-red);
+}
+
+.button.disabled {
+  background: #B8AAA0;
+  pointer-events: none;
+}
