@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love That Covers | LGBTQIA+ Edition</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>LOVE THAT COVERS</h1>
+  <p>LGBTQIA+ Edition</p>
+
+  <p style="max-width: 620px; margin: 20px auto;">
+    A story for those who have carried silence, rejection, and questions,
+    yet still long to know they are fully seen, deeply loved,
+    and never beyond the reach of God’s grace.
+  </p>
+
+  <a href="book.html" class="button">Enter the Story</a>
+</section>
+
+<div class="rainbow-line"></div>
+
+<!-- THE PROMISE -->
+<section class="card">
+  <h2>Love That Covers</h2>
+  <p>
+    Love is not measured by perfection. It is not limited by human judgment.
+    It reaches into the deepest places, restoring what has been broken and
+    holding what others have cast aside.
+  </p>
+</section>
+
+<!-- THE QUILT -->
+<section class="card">
+  <h2>The Quilt</h2>
+  <p>
+    Each patch carries a story, a prayer, a moment of grace.
+    Woven together, they become a testimony of connection, healing,
+    and a love that continues to move from one life to another.
+  </p>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="card">
+  <h2>This Space Is For You</h2>
+  <p>
+    For those who have felt unseen.<br>
+    For those who have questioned where they belong.<br>
+    For those who have wondered if love could truly reach them.<br><br>
+
+    You are not outside of love. You are not beyond grace.
+  </p>
+</section>
+
+<!-- STORIES -->
+<section class="card">
+  <h2>Stories</h2>
+  <p>
+    These stories carry honesty, struggle, and restoration.
+    They reveal how love transforms pain into purpose and
+    how connection rebuilds what rejection tried to break.
+  </p>
+
+  <a href="stories.html" class="button">Read the Stories</a>
+</section>
+
+<!-- CLOSING LINE -->
+<section style="text-align: center; margin: 60px 20px;">
+  <p style="max-width: 600px; margin: auto; color: #CFCFCF;">
+    You are deeply loved. Fully seen. Eternally cherished.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
