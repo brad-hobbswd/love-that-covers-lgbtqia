@@ -223,13 +223,15 @@ p {
 
 .banner {
   background-image: url('74F8A945-40E3-40D5-8C9D-7F7E8DA3ADA7.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  height: 140px;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 4 / 1; /* keeps proper shape */
+
+  margin: 0 auto 25px;
 }
 
 .book-section {
