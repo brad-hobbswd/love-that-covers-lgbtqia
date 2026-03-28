@@ -47,13 +47,22 @@ p {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (FINAL CLEAN)
 ========================= */
 
 .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  padding: 15px 20px;
+
   background: var(--bg-main);
-  padding: 15px 30px;
   border-bottom: 1px solid rgba(0,0,0,0.05);
+
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* =========================
