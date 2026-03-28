@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Author | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- CONTENT -->
+<section class="book-content">
+
+  <div class="book-section">
+
+    <h2>ABOUT THE AUTHOR</h2>
+
+    <p>
+      Bradley Hobbs is a writer, teacher, and advocate for healing, grace, and inclusion. With a heart for those who have felt unseen or unloved, he has dedicated his work to creating stories that inspire hope, restoration, and the understanding that God’s love reaches every heart.
+    </p>
+
+    <p>
+      Brad holds a degree in Information Technology and has over six years of experience in teaching and mentoring children and adults alike. Through personal experiences of faith, rejection, and healing, he has developed a deep understanding of the power of God’s love to restore and transform lives.
+    </p>
+
+    <p>
+      When not writing, Brad enjoys reading scripture, reflecting on life’s lessons, and encouraging others to embrace their identity and worth in God. His work, including <em>Love That Covers</em>, is dedicated to showing that love truly covers all and that everyone is chosen, seen, and deeply loved by God.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
