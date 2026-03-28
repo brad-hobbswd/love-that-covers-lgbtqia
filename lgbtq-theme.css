@@ -47,29 +47,14 @@ p {
 }
 
 /* =========================
-   NAVBAR (FINAL CLEAN)
+   NAVBAR FINAL (CLEAN)
 ========================= */
 
 .navbar {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 25px;
-
-  padding: 15px 20px;
-
-  background: var(--bg-main);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* NAVBAR LAYOUT */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 6px;
 
   max-width: 1000px;
   margin: 0 auto;
@@ -81,27 +66,29 @@ p {
 /* TITLE */
 .nav-title {
   font-family: 'Playfair Display', serif;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
   color: #5A4A45;
 }
 
 /* LINKS */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #5A4A45;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
 }
 
 .nav-links a:hover {
   color: var(--accent-red);
 }
-
 /* =========================
    HERO
 ========================= */
@@ -347,4 +334,16 @@ p {
 
 .navbar a:hover {
   color: var(--accent-red);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-title {
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
 }
