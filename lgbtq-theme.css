@@ -1,44 +1,41 @@
 /* =========================
-   ROOT VARIABLES (COLORS)
+   ROOT VARIABLES
 ========================= */
 
 :root {
---bg-main: #EDE3D6;       /* warm fabric tone */
---bg-secondary: #E2D6C6;  /* slightly darker layer */
-  --card-bg: #F4EDE4;
+  --bg-main: #EDE3D6;
+  --bg-secondary: #E2D6C6;
 
-  --text-main: #F5F5F5;
-  --text-secondary: #CFCFCF;
-  --text-muted: #9A9A9A;
+  --text-main: #3A2E2A;
+  --text-secondary: #5A4A45;
+  --text-muted: #8A7A70;
 
   --accent-red: #A63A3A;
 
   --rainbow: linear-gradient(
-  to right,
-  #C46A6A,
-  #D89A5B,
-  #E3C46A,
-  #7FAF8F,
-  #6A8FBF,
-  #9A7AC4
-);
+    to right,
+    #C46A6A,
+    #D89A5B,
+    #E3C46A,
+    #7FAF8F,
+    #6A8FBF,
+    #9A7AC4
+  );
 }
 
 /* =========================
-   GLOBAL STYLES
+   GLOBAL
 ========================= */
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-main);
-  color: #3A2E2A;
+  background: var(--bg-main);
+  color: var(--text-main);
   line-height: 1.6;
-}
 
-/* =========================
-   TYPOGRAPHY
-========================= */
+  padding-top: 80px; /* for fixed header */
+}
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
@@ -46,7 +43,7 @@ h1, h2, h3 {
 }
 
 p {
-  color: #5A4A45;
+  color: var(--text-secondary);
 }
 
 /* =========================
@@ -56,36 +53,16 @@ p {
 .navbar {
   background: var(--bg-main);
   padding: 15px 30px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.navbar a {
-  color: #5A4A45;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 /* =========================
-   HERO SECTION
+   HERO
 ========================= */
-
-
-
-.hero-text {
-  color: #4A3B35;
-  max-width: 650px;
-  margin: 25px auto 55px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
 
 .hero {
   text-align: center;
-  padding: 40px 20px 60px; /* not too small */
+  padding: 20px 20px 60px;
   background: linear-gradient(
     to bottom,
     var(--bg-secondary),
@@ -93,64 +70,53 @@ p {
   );
 }
 
-
-
 /* =========================
-   CARD SYSTEM (QUILT PIECES)
+   BANNER (IMAGE)
 ========================= */
 
-.card {
-  background: #D8CBB8; /* quilt tone */
-  color: #3E302B;
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto 25px;
+
   border-radius: 16px;
-  padding: 22px;
-  margin: 24px 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
 }
 
-.card p {
-  color: #5B4A43;
-}
-
-.card h2 {
-  color: #2F2421;
-}
-
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* THIS is the key */
-  gap: 25px;
-  max-width: 1000px;
-  margin: 0 auto; /* centers the whole block */
-}
-
-.card {
-  width: 280px;
-  max-width: 100%;
-}
 /* =========================
-   BUTTONS
+   HERO TEXT
+========================= */
+
+.hero-text {
+  max-width: 650px;
+  margin: 20px auto 40px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4A3B35;
+}
+
+/* =========================
+   BUTTON
 ========================= */
 
 .button {
   display: inline-block;
   background: var(--accent-red);
-  color: white;
+  color: #fff;
   padding: 12px 22px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
-  margin-top: 10px;
   transition: 0.3s ease;
 }
 
 .button:hover {
-  background: #A32638;
+  background: #8F2F2F;
 }
+
 /* =========================
-   RAINBOW ACCENTS
+   RAINBOW LINE
 ========================= */
 
 .rainbow-line {
@@ -160,239 +126,12 @@ p {
   margin: 20px 0;
 }
 
-.highlight {
-  border-bottom: 3px solid;
-  border-image: var(--rainbow) 1;
-}
-
 /* =========================
-   FOOTER
+   CARDS SYSTEM
 ========================= */
-
-.footer {
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--text-muted);
-}
-
-/* FOOTER MINIMAL STYLE */
-
-.footer {
-  margin-top: 80px;
-  padding: 40px 20px;
-  background: #E2D6C6;
-}
-
-.footer-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.footer-name {
-  font-family: 'Playfair Display', serif;
-  color: #3A2E2A;
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-.footer-book {
-  color: #6B5A52;
-  font-size: 0.9rem;
-  margin-bottom: 8px;
-}
-
-.footer-copy {
-  color: #8A7A70;
-  font-size: 0.8rem;
-}
-
-.footer::before {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 60px;
-  margin: 0 auto 20px;
-  background: var(--rainbow);
-}
-
-.footer {
-  background: #E2D6C6;
-  border-top: 1px solid rgba(0,0,0,0.05);
-}
-
-.banner {
-  display: block;
-  width: 100%;
-  max-width: 700px;
-
-  margin: 0 auto 25px;
-
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.banner::before {
-  content: "";
-  position: absolute;
-  inset: -10px;
-  border-radius: 24px;
-  background: rgba(0,0,0,0.05);
-  z-index: -1;
-}
-
-.banner {
-  transform: translateY(-6px);
-}
-
-.book-section {
-  margin-bottom: 60px;
-}
-
-.book-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
-  letter-spacing: 0.5px;
-  color: #2F2421;
-}
-.book-content {
-  max-width: 700px;
-  margin: 40px auto 40px;
-  padding: 0 20px;
-}
-
-.book-section p {
-  margin-bottom: 18px;
-  line-height: 1.85;
-  color: #4A3B35;
-}
-
-.book-section h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  color: #6B5A52;
-}
-
-.book-section p:has(em) {
-  font-style: italic;
-}
-
-.book-section p strong {
-  display: block;
-  margin: 30px 0;
-  font-size: 1.2rem;
-  text-align: center;
-  color: var(--accent-red);
-}
-
-.book-section {
-  text-align: center;
-}
-
-.book-section p {
-  max-width: 600px;
-  margin: 0 auto 18px;
-}
-
-.book-section strong {
-  font-size: 1.1rem;
-  color: var(--accent-red);
-}
-
-.book-section {
-  text-align: left;
-}
-
-.book-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* =========================
-   STORIES GRID (QUILT)
-========================= */
-
-.stories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-/* PATCH (QUILT PIECE) */
-
-.patch {
-  background: #D8CBB8;
-  border-radius: 14px;
-  padding: 25px 20px;
-  text-align: center;
-  text-decoration: none;
-  color: #3E302B;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.patch h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 8px;
-}
-
-.patch p {
-  font-size: 0.95rem;
-  color: #5B4A43;
-}
-
-/* HOVER EFFECT */
-
-.patch:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-}
-
-/* SOFTER PATCHES (closing + prayer) */
-
-.patch.soft {
-  background: #E4D8C8;
-}
-
-/* RESOURCE CARDS */
-
-.resource-card {
-  background: #D8CBB8;
-  padding: 18px;
-  border-radius: 12px;
-  margin: 15px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.resource-card a {
-  font-family: 'Playfair Display', serif;
-  text-decoration: none;
-  color: #2F2421;
-  font-size: 1.1rem;
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.resource-card p {
-  margin-top: 5px;
-  font-size: 0.95rem;
-  color: #5B4A43;
-}
-
-/* HIGHLIGHT TEXT */
-
-.highlight {
-  font-weight: 500;
-  margin-bottom: 20px;
-}
 
 .cards-wrapper {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -406,5 +145,117 @@ p {
 
 .card {
   width: 280px;
-  margin: 0; /* IMPORTANT */
+
+  background: #D8CBB8;
+  border-radius: 16px;
+  padding: 22px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  color: #2F2421;
+}
+
+.card p {
+  color: #5B4A43;
+}
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+.book-content {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.book-section {
+  margin-bottom: 60px;
+}
+
+.book-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.book-section p {
+  max-width: 600px;
+  margin: 0 auto 18px;
+  line-height: 1.85;
+}
+
+/* =========================
+   STORIES GRID
+========================= */
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.patch {
+  background: #D8CBB8;
+  border-radius: 14px;
+  padding: 25px 20px;
+  text-align: center;
+  color: #3E302B;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: 0.2s ease;
+}
+
+.patch:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* =========================
+   RESOURCE CARDS
+========================= */
+
+.resource-card {
+  background: #D8CBB8;
+  padding: 18px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.resource-card a {
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+  color: #2F2421;
+  font-size: 1.1rem;
+}
+
+.resource-card p {
+  font-size: 0.95rem;
+  color: #5B4A43;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--bg-secondary);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-name {
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
