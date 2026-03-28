@@ -73,22 +73,7 @@ p {
    HERO SECTION
 ========================= */
 
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: radial-gradient(circle, var(--bg-secondary), var(--bg-main));
-}
 
-.hero p {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.hero p {
-  color: #4A3B35;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
 
 .hero-text {
   color: #4A3B35;
@@ -98,15 +83,9 @@ p {
   line-height: 1.7;
 }
 
-.button {
-  margin-top: 10px;
-}
-
 .hero {
-  padding: 120px 20px 100px;
-}
-
-.hero {
+  text-align: center;
+  padding: 40px 20px 100px;
   background: linear-gradient(
     to bottom,
     var(--bg-secondary),
@@ -114,9 +93,7 @@ p {
   );
 }
 
-.hero {
-  padding: 40px 20px 100px;
-}
+
 
 /* =========================
    CARD SYSTEM (QUILT PIECES)
@@ -242,10 +219,6 @@ p {
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.banner {
-  transform: translateY(-10px);
-}
-
 .book-content {
   max-width: 700px;
   margin: 40px auto;
@@ -262,16 +235,14 @@ p {
   color: #2F2421;
 }
 
-.book-section p {
-  margin-bottom: 18px;
-  line-height: 1.8;
-  color: #4A3B35;
-}
-
 .book-content {
+  max-width: 700px;
   margin: 70px auto 40px;
+  padding: 0 20px;
 }
 
-.book-content {
-  margin-top: 60px;
+.book-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
 }
