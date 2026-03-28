@@ -65,6 +65,43 @@ p {
   margin: 0 auto;
 }
 
+/* NAVBAR LAYOUT */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px 20px;
+
+  background: var(--bg-main);
+}
+
+/* TITLE */
+.nav-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #5A4A45;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5A4A45;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--accent-red);
+}
+
 /* =========================
    HERO
 ========================= */
