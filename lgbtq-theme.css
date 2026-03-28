@@ -129,6 +129,14 @@ p {
   padding: 120px 20px 100px;
 }
 
+.hero {
+  background: linear-gradient(
+    to bottom,
+    var(--bg-secondary),
+    var(--bg-main)
+  );
+}
+
 /* =========================
    CARD SYSTEM (QUILT PIECES)
 ========================= */
@@ -167,6 +175,11 @@ p {
 
 .button:hover {
   background: #A32638;
+}
+
+.button {
+  padding: 12px 22px;
+  font-size: 1rem;
 }
 
 /* =========================
