@@ -116,14 +116,16 @@ p {
 .card h2 {
   color: #2F2421;
 }
+
 .cards-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center; /* THIS is the key */
   gap: 25px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto; /* centers the whole block */
 }
+
 .card {
   width: 280px;
   max-width: 100%;
