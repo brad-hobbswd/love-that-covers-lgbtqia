@@ -60,7 +60,7 @@ p {
 }
 
 .navbar a {
-  color: var(--text-main);
+  color: #5A4A45;
   text-decoration: none;
   margin-right: 20px;
 }
@@ -94,29 +94,21 @@ p {
 ========================= */
 
 .card {
-  background: #D6C7B2; /* darker quilt patch */
-  color: #3A2E2A; /* deep warm brown text */
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background: #D8CBB8; /* quilt tone */
+  color: #3E302B;
+  border-radius: 16px;
+  padding: 22px;
+  margin: 24px 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .card p {
-  color: #E0E0E0;
+  color: #5B4A43;
 }
 
 .card h2 {
-  color: #FFFFFF;
-}
-
-.card {
-  background: linear-gradient(145deg, #2A2A2E, #242427);
-}
-
-.card {
-  border-left: 3px solid transparent;
-  border-image: var(--rainbow) 1;
+  color: #2F2421;
 }
 
 /* =========================
@@ -168,7 +160,7 @@ p {
 .footer {
   margin-top: 80px;
   padding: 40px 20px;
-  background: #1A1A1C;
+  background: #E2D6C6;
 }
 
 .footer-content {
