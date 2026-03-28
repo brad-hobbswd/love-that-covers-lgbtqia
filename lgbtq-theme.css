@@ -94,12 +94,29 @@ p {
 ========================= */
 
 .card {
-  background: var(--card-bg);
-  color: #1C1C1E;
+  background: #2A2A2E; /* darker fabric tone */
+  color: #F5F5F5; /* light text */
   border-radius: 12px;
   padding: 20px;
   margin: 20px 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.card p {
+  color: #E0E0E0;
+}
+
+.card h2 {
+  color: #FFFFFF;
+}
+
+.card {
+  background: linear-gradient(145deg, #2A2A2E, #242427);
+}
+
+.card {
+  border-left: 3px solid transparent;
+  border-image: var(--rainbow) 1;
 }
 
 /* =========================
