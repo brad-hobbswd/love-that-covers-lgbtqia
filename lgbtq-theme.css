@@ -228,16 +228,15 @@ p {
   background-position: center;
 
   width: 100%;
-  max-width: 1000px; /* slightly larger */
-  aspect-ratio: 4 / 1;
+  max-width: 700px; /* controls size cleanly */
 
-  margin: 0 auto 35px;
+  height: auto;
+  aspect-ratio: unset; /* REMOVE forced ratio */
 
-  border-radius: 20px;
+  margin: 0 auto 25px;
 
-  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
-
-  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .banner::before {
