@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store | Love That Covers</title>
+<meta name="description" content="Love That Covers LGBTQIA+ Edition by Bradley Hobbs.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+<!-- HEADER LOAD -->
+<div id="header-placeholder"></div>
+
+<!-- STORE SECTION -->
+<section class="book-content">
+
+  <div class="book-section">
+    <h2>Love That Covers</h2>
+
+    <p style="text-align:center; font-size:0.95rem; color: var(--text-muted);">
+      LGBTQIA+ Edition
+    </p>
+
+    <div class="rainbow-line"></div>
+
+    <div class="store-book">
+      <img src="C61C2DB3-86AD-4EA9-A7C0-138A3BE9BBAC.png" alt="Love That Covers Book Cover">
+
+      <div class="store-info">
+        <h3>By Bradley Hobbs</h3>
+
+        <p>
+          A message of healing, truth, and the covering love of Jesus. 
+          Written for those who felt pushed aside, silenced, or overlooked, 
+          this book restores voice, identity, and belonging through grace.
+        </p>
+
+        <p class="coming-soon">Coming Soon</p>
+
+        <a class="button disabled">Available Soon</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER LOAD -->
+<div id="footer-placeholder"></div>
+
+<script>
+fetch('header.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+fetch('footer.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+
+</body>
+</html>
