@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter Five | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- CHAPTER CONTENT -->
+<section class="book-content">
+
+  <div class="book-section">
+
+    <h2>CHAPTER FIVE</h2>
+    <h3 style="margin-bottom: 30px;">THE LEGACY OF LOVE</h3>
+
+    <p>
+      Years had passed since the quilt had first been stitched together by Daniel and the other men in the church. Its journey had carried it through the hands and hearts of men who had felt unseen, unloved, or rejected. Each man had added his own piece, his own story, his own prayer. And now, in a quiet Sunday morning service, the quilt rested near the altar, a testament to the persistent, unrelenting love of God.
+    </p>
+
+    <p>
+      Daniel sat in the back pew, older now, his hair streaked with silver, but his heart light with the knowledge that the love he had once feared could not reach him had traveled far beyond his own life. Michael sat beside him, calm and steady, the deep lines of past pain softened by grace. Joshua and Adrian were present as well, their faces serene, their eyes bright with the quiet joy of healing.
+    </p>
+
+    <p>
+      The pastor stepped forward, gesturing toward the quilt. “This is more than fabric,” he said. “It is a story of God’s love. It is a reminder that no one is beyond the reach of His grace. It is proof that when we allow love to cover what is broken, restoration happens.”
+    </p>
+
+    <p>
+      The congregation was small that morning, but attentive. Among them were men and women who had carried shame, loneliness, and rejection. They leaned forward, listening, watching, feeling the quiet power of God’s love as reflected in the quilt’s colors and textures.
+    </p>
+
+    <p>
+      A young man approached the altar, drawn to the quilt. His eyes were wide, unsure, but something in the warmth of the fabric called to him. He reached out and touched it, running his fingers over the patches and threads.
+    </p>
+
+    <p><em>
+      “This… it feels like love,” he whispered.
+    </em></p>
+
+    <p>
+      Daniel smiled softly. “It is. And it will continue to be. Love does not end. Love multiplies. Every stitch you see here is a prayer, a promise, and a piece of hope that carries through time.”
+    </p>
+
+    <p>
+      Michael added, “God’s love has a way of finding us, even when we feel unworthy. This quilt is a reminder that we are all seen. We are all chosen. We are all loved.”
+    </p>
+
+    <p>
+      Joshua knelt to adjust the quilt gently, his hands tracing the squares he had sewn. “It is not just the work of our hands,” he said. “It is the work of God’s heart, flowing through us, teaching us how to give and receive love that heals.”
+    </p>
+
+    <p>
+      Adrian stood quietly, looking at the young man and then at the congregation. “We have all known what it is to feel alone, unseen, unworthy,” he said. “But when we let God’s love cover us, when we allow it to flow through us, we can pass it on. We can change lives. We can be part of a legacy of hope, healing, and grace.”
+    </p>
+
+    <p>
+      The young man nodded, tears glistening in his eyes. He gently lifted the quilt and wrapped it around his shoulders. The warmth and weight of it were tangible, but so was the invisible thread of God’s love running through each square. He felt it in his chest, in his mind, and most profoundly in his spirit.
+    </p>
+
+    <p>
+      For the first time in his life, he understood. Love could cover everything—the fear, the rejection, the shame. Love could heal. Love could restore. And love, once received, could be shared freely, multiplied through generations.
+    </p>
+
+    <p>
+      The five men stood together at the altar, the quilt between them, their hearts lifted in quiet praise. They had carried their pain, their stories, and their prayers into a single creation. And in doing so, they had discovered a truth that would never fade: God’s love sees the broken, redeems the rejected, and covers all wounds with mercy.
+    </p>
+
+    <p>
+      As sunlight streamed through the stained-glass windows, the colors danced across the quilt and the faces of those gathered. It was more than a morning service. It was a celebration of life restored, of hope renewed, and of the unending power of love.
+    </p>
+
+    <p>
+      And in that small church, on that ordinary Sunday morning, the legacy of love continued to grow, quietly, persistently, and eternally; one heart at a time.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
