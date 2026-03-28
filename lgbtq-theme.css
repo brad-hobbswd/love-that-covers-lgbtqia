@@ -110,19 +110,23 @@ p {
 }
 
 .hero h1 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .hero-sub {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .hero-text {
-  margin: 20px auto 30px;
+  margin: 20px auto 35px;
 }
 
 .button {
   margin-top: 10px;
+}
+
+.hero {
+  padding: 120px 20px 100px;
 }
 
 /* =========================
