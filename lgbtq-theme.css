@@ -624,3 +624,35 @@ p {
 .resource-card a {
   color: var(--accent-red);
 }
+
+/* =========================
+   CHAPTER PAGE ENHANCEMENT
+========================= */
+
+.chapter-full {
+  width: 100%;
+  max-width: 720px;
+
+  background: linear-gradient(135deg, #EFE1D2, #D8CBB8);
+
+  border-radius: 18px;
+  padding: 28px;
+
+  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
+}
+
+.chapter-full h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.chapter-full h3 {
+  color: var(--text-muted);
+}
+
+.chapter-full p {
+  line-height: 1.9;
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+}
+
