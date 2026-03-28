@@ -255,3 +255,25 @@ p {
 .banner {
   transform: translateY(-10px);
 }
+
+.book-content {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.book-section {
+  margin-bottom: 60px;
+}
+
+.book-section h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  color: #2F2421;
+}
+
+.book-section p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+  color: #4A3B35;
+}
