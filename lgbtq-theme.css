@@ -222,16 +222,9 @@ p {
 }
 
 .banner {
-  background-image: url('0C57556B-64CB-42F0-B5E5-9DD0FEE781D7.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
+  display: block;
   width: 100%;
-  max-width: 700px; /* controls size cleanly */
-
-  height: auto;
-  aspect-ratio: unset; /* REMOVE forced ratio */
+  max-width: 700px;
 
   margin: 0 auto 25px;
 
