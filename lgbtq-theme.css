@@ -228,10 +228,29 @@ p {
   background-position: center;
 
   width: 100%;
-  max-width: 900px;
-  aspect-ratio: 4 / 1; /* keeps proper shape */
+  max-width: 1000px; /* slightly larger */
+  aspect-ratio: 4 / 1;
 
-  margin: 0 auto 25px;
+  margin: 0 auto 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 24px;
+  background: rgba(0,0,0,0.05);
+  z-index: -1;
+}
+
+.banner {
+  transform: translateY(-6px);
 }
 
 .book-section {
