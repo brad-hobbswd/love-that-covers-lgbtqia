@@ -656,3 +656,53 @@ p {
   font-size: 1.02rem;
 }
 
+/* =========================
+   PRAYER PAGE (UNIQUE STYLE)
+========================= */
+
+.prayer-hero {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.prayer-divider {
+  width: 60px;
+  height: 3px;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  background: var(--rainbow);
+}
+
+/* main prayer space */
+.prayer-space {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.prayer-text {
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #4A3B35;
+}
+
+/* spacing rhythm */
+.prayer-text p {
+  margin-bottom: 22px;
+}
+
+/* emphasis */
+.prayer-text .amen {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+/* closing line */
+.prayer-closing {
+  text-align: center;
+  margin: 60px 20px;
+  color: #6B5A52;
+  font-size: 0.95rem;
+}
