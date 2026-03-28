@@ -332,3 +332,35 @@ p {
 .patch.soft {
   background: #E4D8C8;
 }
+
+/* RESOURCE CARDS */
+
+.resource-card {
+  background: #D8CBB8;
+  padding: 18px;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.resource-card a {
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+  color: #2F2421;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.resource-card p {
+  margin-top: 5px;
+  font-size: 0.95rem;
+  color: #5B4A43;
+}
+
+/* HIGHLIGHT TEXT */
+
+.highlight {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
