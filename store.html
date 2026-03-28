@@ -1,64 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Store | Love That Covers</title>
-<meta name="description" content="Love That Covers LGBTQIA+ Edition by Bradley Hobbs.">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store | Love That Covers</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER LOAD -->
-<div id="header-placeholder"></div>
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO STYLE INTRO -->
+<section class="hero">
+
+  <h1>Love That Covers</h1>
+
+  <p class="hero-text">
+    A message of healing, belonging, and the covering love of Jesus.
+    Created for those who have felt unseen, unheard, or pushed aside,
+    yet still carry a desire to be known and held in grace.
+  </p>
+
+</section>
+
+<div class="rainbow-line"></div>
 
 <!-- STORE SECTION -->
-<section class="book-content">
+<section class="cards-wrapper">
 
-  <div class="book-section">
-    <h2>Love That Covers</h2>
+  <div class="cards-container">
 
-    <p style="text-align:center; font-size:0.95rem; color: var(--text-muted);">
-      LGBTQIA+ Edition
-    </p>
+    <div class="card" style="max-width: 320px; text-align: center;">
 
-    <div class="rainbow-line"></div>
+      <img src="C61C2DB3-86AD-4EA9-A7C0-138A3BE9BBAC.png"
+           alt="Love That Covers Book Cover"
+           style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
 
-    <div class="store-book">
-      <img src="C61C2DB3-86AD-4EA9-A7C0-138A3BE9BBAC.png" alt="Love That Covers Book Cover">
+      <h2>Love That Covers</h2>
 
-      <div class="store-info">
-        <h3>By Bradley Hobbs</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted);">
+        LGBTQIA+ Edition
+      </p>
 
-        <p>
-          A message of healing, truth, and the covering love of Jesus. 
-          Written for those who felt pushed aside, silenced, or overlooked, 
-          this book restores voice, identity, and belonging through grace.
-        </p>
+      <p>
+        A story of restoration, identity, and a love that never turns away.
+        This book speaks into silence and brings truth wrapped in grace.
+      </p>
 
-        <p class="coming-soon">Coming Soon</p>
+      <p style="color: var(--accent-red); font-weight: 600;">
+        Coming Soon
+      </p>
 
-        <a class="button disabled">Available Soon</a>
-      </div>
+      <a class="button" style="background:#B8AAA0; pointer-events:none;">
+        Available Soon
+      </a>
+
     </div>
 
   </div>
 
 </section>
 
-<!-- FOOTER LOAD -->
-<div id="footer-placeholder"></div>
+<!-- CLOSING -->
+<section style="text-align: center; margin: 60px 20px;">
+  <p style="max-width: 600px; margin: auto; color: #6B5A52;">
+    A love that covers is still reaching, still restoring, and still calling.
+  </p>
+</section>
 
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER (YOUR SYSTEM) -->
 <script>
-fetch('header.html')
+fetch('/love-that-covers-lgbtqia/layout.html')
   .then(res => res.text())
-  .then(data => document.getElementById('header-placeholder').innerHTML = data);
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
 
-fetch('footer.html')
-  .then(res => res.text())
-  .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
 </script>
 
 </body>
