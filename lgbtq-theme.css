@@ -260,3 +260,26 @@ p {
   text-align: center;
   color: var(--accent-red);
 }
+
+.book-section {
+  text-align: center;
+}
+
+.book-section p {
+  max-width: 600px;
+  margin: 0 auto 18px;
+}
+
+.book-section strong {
+  font-size: 1.1rem;
+  color: var(--accent-red);
+}
+
+.book-section {
+  text-align: left;
+}
+
+.book-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
