@@ -124,6 +124,10 @@ p {
   );
 }
 
+.hero {
+  padding: 40px 20px 100px;
+}
+
 /* =========================
    CARD SYSTEM (QUILT PIECES)
 ========================= */
@@ -246,4 +250,8 @@ p {
   margin: 0 auto 35px;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.banner {
+  transform: translateY(-10px);
 }
