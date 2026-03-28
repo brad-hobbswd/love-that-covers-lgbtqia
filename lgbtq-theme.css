@@ -75,16 +75,6 @@ p {
 
 .hero {
   text-align: center;
-  padding: 80px 20px 100px;
-  background: linear-gradient(
-    to bottom,
-    var(--bg-secondary),
-    var(--bg-main)
-  );
-}
-
-.hero {
-  text-align: center;
   padding: 100px 20px;
   background: radial-gradient(circle, var(--bg-secondary), var(--bg-main));
 }
@@ -280,4 +270,8 @@ p {
 
 .book-content {
   margin: 70px auto 40px;
+}
+
+.book-content {
+  margin-top: 60px;
 }
