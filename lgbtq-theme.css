@@ -241,3 +241,10 @@ p {
   line-height: 1.85;
   color: #4A3B35;
 }
+
+.book-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #6B5A52;
+}
