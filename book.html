@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Book | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO (SIMPLE, QUIET) -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- CONTENT -->
+<section class="book-content">
+
+  <!-- PREFACE -->
+  <div class="book-section">
+    <h2>Preface</h2>
+
+    <p>
+      Love That Covers was born from a single verse that has carried me through seasons of pain, doubt, and longing: Love covers a multitude of sin (1 Peter 4:8). These words are not only a command to love others, but also a promise of God’s relentless love for every heart, including those who have felt unseen, rejected, or unworthy.
+    </p>
+
+    <p>
+      This book is dedicated to the LGBTQIA+ community, to every person who has walked through fear, shame, or misunderstanding, and to anyone who has struggled to believe they are fully loved by God. The stories within these chapters reflect the journey of men who have faced isolation and brokenness yet have discovered that God’s love can reach into every wound, every scar, and every shadow.
+    </p>
+
+    <p>
+      The quilt, which serves as the heart of this story, is more than a collection of fabrics. It is a symbol of connection, faith, and restoration. Each patch carries a prayer, a piece of hope, and the promise that love, when offered freely, can heal. As the quilt passes from one man to another, it mirrors the way God’s love moves through our lives, covering pain, restoring trust, and creating a legacy of grace.
+    </p>
+
+    <p>
+      This book is intended to offer encouragement, hope, and affirmation. It is a reminder that healing is possible, that love is persistent, and that no identity, experience, or past mistake can place anyone beyond the reach of God’s mercy.
+    </p>
+
+    <p>
+      May these pages inspire you to receive love as freely as it is given and to extend it boldly, knowing that it can transform lives and create a tapestry of grace that spans generations.
+    </p>
+  </div>
+
+  <!-- FORWARD -->
+  <div class="book-section">
+    <h2>Forward</h2>
+
+    <p>
+      There are moments in life when words feel inadequate to describe the depth of God’s love. There are hearts that have carried shame, rejection, and silence so long that the idea of being fully seen and loved feels impossible. This book, Love That Covers, was born out of the truth of one simple yet profound scripture: Love covers a multitude of sin (1 Peter 4:8).
+    </p>
+
+    <p>
+      It is a reminder that God’s love is not limited by human judgment. It is not measured by perfection or conformity. It reaches into the deepest places of our hearts, the places where we have been broken, hurt, or cast aside.
+    </p>
+
+    <p>
+      This story is for every man who has ever felt unseen, unloved, or unworthy. It is for those who have struggled to reconcile identity with faith, for those who have wondered if God’s love could truly include them. Through the symbol of the quilt, the narrative carries a message of hope, healing, and restoration. Each patch is a prayer, a story, a piece of grace that reminds us that love is persistent and redemptive.
+    </p>
+
+    <p>
+      As you read, you will witness how love can transform pain into purpose, how connection can restore what rejection tried to break, and how the faithfulness of God can weave hearts together in ways we never imagined.
+    </p>
+
+    <p>
+      May this book remind you that you are deeply loved, fully seen, and eternally cherished. May it inspire you to embrace God’s grace for yourself and to pass it on to others.
+    </p>
+
+    <p>
+      In these pages, you will discover that healing is possible, hope is real and love truly covers all.
+    </p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
