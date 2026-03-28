@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- QUILT GRID -->
+<section class="stories-grid">
+
+  <a href="chapter1.html" class="patch">
+    <h3>Chapter One</h3>
+    <p>The Quilt</p>
+  </a>
+
+  <a href="chapter2.html" class="patch">
+    <h3>Chapter Two</h3>
+    <p>The Fire’s Gift</p>
+  </a>
+
+  <a href="chapter3.html" class="patch">
+    <h3>Chapter Three</h3>
+    <p>The Thread Continues</p>
+  </a>
+
+  <a href="chapter4.html" class="patch">
+    <h3>Chapter Four</h3>
+    <p>The Keeper of the Quilt</p>
+  </a>
+
+  <a href="chapter5.html" class="patch">
+    <h3>Chapter Five</h3>
+    <p>The Legacy of Love</p>
+  </a>
+
+  <a href="closing.html" class="patch soft">
+    <h3>Closing</h3>
+    <p>Closing Thoughts</p>
+  </a>
+
+  <a href="prayer.html" class="patch soft">
+    <h3>Prayer</h3>
+    <p>Prayer of Commitment</p>
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
