@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- CONTENT -->
+<section class="book-content">
+
+  <!-- INTRO -->
+  <div class="book-section">
+    <h2>RESOURCES</h2>
+
+    <p class="highlight">
+      You are not alone in your journey. These spaces are here to walk with you.
+    </p>
+
+    <p>
+      This story does not end with the final page. Healing continues, growth continues, and love continues. These resources are shared to help guide you forward as you continue discovering the depth of God’s love in your life.
+    </p>
+  </div>
+
+  <!-- MY WORK -->
+  <div class="book-section">
+    <h3>My Work</h3>
+
+    <div class="resource-card">
+      <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">
+        Whispers in the Pew
+      </a>
+      <p>A devotional journey centered on healing, truth, and quiet faith.</p>
+    </div>
+
+    <div class="resource-card">
+      <a href="https://brad-hobbswd.github.io/about-me/">
+        About Me
+      </a>
+      <p>Learn more about my story, faith, and the heart behind this work.</p>
+    </div>
+
+    <div class="resource-card">
+      <a href="https://brad-hobbswd.github.io/brad-hobbswd/">
+        Brad Hobbs Web Design
+      </a>
+      <p>Creative and professional web design work built with clarity and purpose.</p>
+    </div>
+  </div>
+
+  <!-- SPIRITUAL COMMUNITY -->
+  <div class="book-section">
+    <h3>Spiritual Community</h3>
+
+    <div class="resource-card">
+      <a href="https://www.mercyforyou.org">
+        Bethesda Tabernacle
+      </a>
+      <p>A church that has been part of my personal journey of faith and growth.</p>
+    </div>
+
+    <div class="resource-card">
+      <a href="https://www.bapbi.net">
+        Bethesda Apostolic Pentecostal Bible Institute
+      </a>
+      <p>A place of deeper biblical study and understanding that has influenced my walk with God.</p>
+    </div>
+  </div>
+
+  <!-- CLOSING NOTE -->
+  <div class="book-section">
+    <p>
+      Every step forward matters. Every moment of healing matters. As you continue your journey, may you always remember that you are seen, you are chosen, and you are deeply loved.
+    </p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
