@@ -96,8 +96,9 @@ p {
   padding: 20px 20px 60px;
   background: linear-gradient(
     to bottom,
-    var(--bg-secondary),
-    var(--bg-main)
+    #E2D6C6,
+    #EDE3D6 60%,
+    #F4ECE2
   );
 }
 
@@ -177,7 +178,7 @@ p {
 .card {
   width: 280px;
 
-  background: #D8CBB8;
+  background: linear-gradient(135deg, #E8D8C3, #D8CBB8);
   border-radius: 16px;
   padding: 22px;
 
@@ -191,6 +192,17 @@ p {
 
 .card p {
   color: #5B4A43;
+}
+
+.card::before,
+.patch::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  margin-bottom: 12px;
+  border-radius: 2px;
+  background: var(--rainbow);
 }
 
 /* =========================
@@ -356,3 +368,11 @@ p {
 .patch p {
   opacity: 0.85;
 }
+
+.patch:nth-child(1) { background: #D8CBB8; }
+.patch:nth-child(2) { background: #DCC6B0; }
+.patch:nth-child(3) { background: #CFC2B8; }
+.patch:nth-child(4) { background: #E0D2BF; }
+.patch:nth-child(5) { background: #D6C7B2; }
+.patch:nth-child(6) { background: #E6D8C8; }
+.patch:nth-child(7) { background: #D9CBB9; }
