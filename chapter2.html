@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter Two | Love That Covers</title>
+
+  <link rel="stylesheet" href="lgbtq-theme.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="banner"></div>
+</section>
+
+<!-- CHAPTER CONTENT -->
+<section class="book-content">
+
+  <div class="book-section">
+
+    <h2>CHAPTER TWO</h2>
+    <h3 style="margin-bottom: 30px;">THE FIRE’S GIFT</h3>
+
+    <p>
+      The quilt arrived at the home of Michael, a man whose life had been marked by loss and longing. He had grown up in a household where he had been told repeatedly that his identity was wrong, a source of shame, a secret to hide. Over the years, those words had carved deep lines of fear and isolation into his heart. The fire that had destroyed his small apartment months ago was only the latest blow. The material loss had been devastating, but what haunted him most was the persistent belief that he was unworthy of care, of love, of God’s attention.
+    </p>
+
+    <p>
+      When the delivery man knocked on his door carrying the large, carefully wrapped bundle, Michael hesitated. Something inside him whispered that this could be yet another disappointment, another reminder that the world had no space for him. But the softness of the fabric beneath the wrapping, the weight of it in his hands, hinted at something different.
+    </p>
+
+    <p>
+      He opened it carefully and unfolded the quilt, square by square. Each patch seemed to tell a story. Some were bright and cheerful, some faded and muted, yet every piece radiated care and intention. As he traced the stitches with his fingers, a single phrase caught his eye: Love Covers.
+    </p>
+
+    <p>
+      Michael paused, breathing unevenly. The words felt almost impossible to claim for him. He had carried so many failures, so many rejections, that even the notion of being fully covered by love seemed foreign. And yet, here it was, woven into something tangible, something created by hands that had chosen to care.
+    </p>
+
+    <p>
+      Later that evening, he held the quilt around his shoulders, the fabric settling against his chest. The warmth was more than physical. It was a message, a quiet reminder that God’s love was not conditional on his past, his mistakes, or the way others had treated him. Michael allowed himself to feel it fully, something he had rarely done in his adult life.
+    </p>
+
+    <p>
+      The next Sunday, he made his way back to the church. He had never been confident in approaching people there, often keeping to the back pews, quiet and invisible. But today, he felt something shift inside him, a gentle urging he could not ignore. He walked up to Daniel, who had helped create the quilt, and extended his hand with a tremor he could not hide.
+    </p>
+
+    <p>
+      “You… you made this?” Michael asked quietly.
+    </p>
+
+    <p>
+      Daniel smiled, his eyes warm. “I helped. Many of us did. It was made to remind someone that they are loved. That love covers everything, even the things we think cannot be forgiven.”
+    </p>
+
+    <p>
+      Tears pricked Michael’s eyes. For the first time in decades, he felt the possibility of being fully seen, fully embraced by a love that was not conditional on performance, acceptance, or approval. He sat quietly with Daniel, listening to the church filled with the soft hum of voices in prayer.
+    </p>
+
+    <p>
+      Over the weeks that followed, Michael began to open his heart slowly, tentatively reaching out to others, sharing his story, and allowing himself to feel the support of a community that, while imperfect, reflected God’s persistent love. He learned to pray in a new way, not asking to be fixed or made perfect, but asking to be held and carried in love. And slowly, gently, the deep ache of shame and rejection began to lift.
+    </p>
+
+    <p>
+      By the time winter arrived, Michael had begun to stitch a small piece of fabric himself, a square he had chosen to contribute to the quilt for another family in need. He chose a soft, sky-blue piece, reminding him of calm mornings and the first hints of hope he now carried. With each stitch, he felt God’s grace weaving itself into his hands, into his life, and into the lives of others who would come to know love through the quilt.
+    </p>
+
+    <p>
+      It was not a sudden miracle, but a steady, quiet transformation. Michael realized that love could be given freely, that it could cover all the places where he had felt broken or unworthy. The quilt had been the beginning, but the journey of healing was unfolding in him, in ways he had once thought impossible.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+fetch('/love-that-covers-lgbtqia/layout.html')
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+
+    document.getElementById('header').innerHTML =
+      doc.querySelector('#site-header').innerHTML;
+
+    document.getElementById('footer').innerHTML =
+      doc.querySelector('#site-footer').innerHTML;
+  });
+</script>
+
+</body>
+</html>
