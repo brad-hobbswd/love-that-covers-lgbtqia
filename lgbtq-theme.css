@@ -85,7 +85,8 @@ p {
 
 .hero {
   text-align: center;
-  padding: 40px 20px 100px;
+  .hero {
+  padding: 40px 20px 40px;
   background: linear-gradient(
     to bottom,
     var(--bg-secondary),
@@ -214,7 +215,7 @@ p {
   background-position: center;
   height: 140px;
   max-width: 800px;
-  margin: 0 auto 35px;
+  margin: 0 auto 15px;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
@@ -232,7 +233,7 @@ p {
 }
 .book-content {
   max-width: 700px;
-  margin: 70px auto 40px;
+  margin: 30px auto 40px;
   padding: 0 20px;
 }
 
