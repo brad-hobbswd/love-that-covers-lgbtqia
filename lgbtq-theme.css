@@ -103,12 +103,26 @@ p {
 }
 
 /* =========================
-   BANNER (IMAGE)
+   MAIN HERO BANNER (INDEX)
 ========================= */
 
-.banner {
+.banner-main {
   display: block;
-  width: 230px;      /* smaller size */
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto 25px;
+
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+/* =========================
+   BOOK COVER (SMALL)
+========================= */
+
+.banner-book {
+  display: block;
+  width: 180px;
   max-width: 100%;
   margin: 0 auto 25px;
 
@@ -116,8 +130,9 @@ p {
   box-shadow: 0 12px 28px rgba(0,0,0,0.14);
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
-  .banner {
+  .banner-book {
     width: 140px;
   }
 }
