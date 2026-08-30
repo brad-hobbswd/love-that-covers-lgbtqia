@@ -1,16 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 850" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
 <title id="title">Love That Covers LGBTQIA+ Edition</title>
-<desc id="desc">A refined editorial banner featuring a luminous rainbow quilt inspired design and the title Love That Covers LGBTQIA+ Edition.</desc>
+<desc id="desc">An elegant rainbow quilt inspired banner for Love That Covers LGBTQIA+ Edition.</desc>
 <defs>
-<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf5"/><stop offset="1" stop-color="#f2e8e8"/></linearGradient>
-<linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ef6f78"/><stop offset=".17" stop-color="#f2a65a"/><stop offset=".34" stop-color="#e6cf67"/><stop offset=".51" stop-color="#75b887"/><stop offset=".68" stop-color="#6b9fd1"/><stop offset=".84" stop-color="#9276c2"/><stop offset="1" stop-color="#d878a6"/></linearGradient>
-<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="22" stdDeviation="25" flood-color="#332733" flood-opacity=".2"/></filter>
-<pattern id="quilt" width="180" height="180" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="180" height="180" fill="#fffaf5"/><rect width="90" height="90" fill="#ef6f78"/><rect x="90" y="90" width="90" height="90" fill="#9276c2"/><rect x="90" width="90" height="90" fill="#6b9fd1"/><rect y="90" width="90" height="90" fill="#e6cf67"/><path d="M0 0L180 180M180 0L0 180" stroke="#fff" stroke-opacity=".3" stroke-width="3"/></pattern>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#241d2b"/><stop offset="0.5" stop-color="#4a3041"/><stop offset="1" stop-color="#201f35"/></linearGradient>
+ <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#e66b72"/><stop offset=".18" stop-color="#eea45c"/><stop offset=".36" stop-color="#e6d26d"/><stop offset=".54" stop-color="#75b98a"/><stop offset=".72" stop-color="#6e9fd0"/><stop offset=".88" stop-color="#9d78c4"/><stop offset="1" stop-color="#d878a5"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-opacity=".28"/></filter>
 </defs>
-<rect width="1800" height="850" rx="48" fill="url(#paper)"/><rect x="28" y="28" width="1744" height="794" rx="34" fill="none" stroke="#b38a8e" stroke-opacity=".35" stroke-width="2"/>
-<path d="M85 115H1715M85 735H1715" stroke="#d9b26c" stroke-opacity=".65" stroke-width="2"/>
-<rect x="96" y="185" width="500" height="500" rx="32" fill="url(#quilt)" opacity=".92" filter="url(#shadow)"/><rect x="124" y="213" width="444" height="444" rx="22" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="4"/>
-<path d="M130 625 C250 510 350 690 485 570 S650 470 720 555" fill="none" stroke="url(#rainbow)" stroke-width="22" stroke-linecap="round"/>
-<g><text x="700" y="285" fill="#8b5a73" font-family="Georgia,serif" font-size="30" letter-spacing="10">LOVE THAT COVERS</text><text x="700" y="385" fill="#3e2837" font-family="Georgia,serif" font-size="82" font-weight="700">LGBTQIA+ Edition</text><text x="700" y="445" fill="#6d5a63" font-family="Arial,sans-serif" font-size="25" letter-spacing="4">BELONGING · HEALING · GRACE · LOVE</text><path d="M700 490H1450" stroke="#d9b26c" stroke-width="2"/><text x="700" y="555" fill="#4d3a44" font-family="Georgia,serif" font-size="30">A story for those who have carried silence,</text><text x="700" y="600" fill="#4d3a44" font-family="Georgia,serif" font-size="30">rejection, questions, and hope.</text></g>
-<circle cx="1450" cy="675" r="7" fill="#d9b26c"/><circle cx="1424" cy="675" r="4" fill="#ef6f78"/><circle cx="1476" cy="675" r="4" fill="#9276c2"/>
+<rect width="1600" height="700" rx="42" fill="url(#bg)"/>
+<path d="M70 70H1530M70 630H1530" stroke="#d9b26c" stroke-opacity=".45"/>
+<g opacity=".18" fill="none" stroke="#fff" stroke-width="2">
+ <path d="M110 110h240v240H110zM350 350h240v240H350zM590 110h240v240H590zM830 350h240v240H830zM1070 110h240v240h-240zM1310 350h180v240h-180z"/>
+ <path d="M110 350l240-240M350 590l240-240M590 350l240-240M830 590l240-240M1070 350l240-240M1310 590l180-180"/>
+</g>
+<path d="M100 535 C360 395 540 610 800 470 S1240 335 1500 500" fill="none" stroke="url(#rainbow)" stroke-width="24" stroke-linecap="round" filter="url(#shadow)"/>
+<g text-anchor="middle">
+ <text x="800" y="235" fill="#e5c984" font-family="Georgia,serif" font-size="30" letter-spacing="9">LOVE THAT COVERS</text>
+ <text x="800" y="335" fill="#fffaf4" font-family="Georgia,serif" font-size="82" font-weight="700">LGBTQIA+ Edition</text>
+ <text x="800" y="395" fill="#eadfe6" font-family="Arial,sans-serif" font-size="25" letter-spacing="3">A STORY OF BELONGING · HEALING · GRACE · LOVE</text>
+</g>
+<circle cx="800" cy="520" r="7" fill="#d9b26c"/><circle cx="770" cy="520" r="4" fill="#fff" opacity=".7"/><circle cx="830" cy="520" r="4" fill="#fff" opacity=".7"/>
 </svg>
