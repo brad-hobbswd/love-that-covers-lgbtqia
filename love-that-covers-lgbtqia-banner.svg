@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+<title id="title">Love That Covers LGBTQIA+ Edition</title>
+<desc id="desc">An elegant rainbow quilt inspired banner for Love That Covers LGBTQIA+ Edition.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#241d2b"/><stop offset="0.5" stop-color="#4a3041"/><stop offset="1" stop-color="#201f35"/></linearGradient>
+ <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#e66b72"/><stop offset=".18" stop-color="#eea45c"/><stop offset=".36" stop-color="#e6d26d"/><stop offset=".54" stop-color="#75b98a"/><stop offset=".72" stop-color="#6e9fd0"/><stop offset=".88" stop-color="#9d78c4"/><stop offset="1" stop-color="#d878a5"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-opacity=".28"/></filter>
+</defs>
+<rect width="1600" height="700" rx="42" fill="url(#bg)"/>
+<path d="M70 70H1530M70 630H1530" stroke="#d9b26c" stroke-opacity=".45"/>
+<g opacity=".18" fill="none" stroke="#fff" stroke-width="2">
+ <path d="M110 110h240v240H110zM350 350h240v240H350zM590 110h240v240H590zM830 350h240v240H830zM1070 110h240v240h-240zM1310 350h180v240h-180z"/>
+ <path d="M110 350l240-240M350 590l240-240M590 350l240-240M830 590l240-240M1070 350l240-240M1310 590l180-180"/>
+</g>
+<path d="M100 535 C360 395 540 610 800 470 S1240 335 1500 500" fill="none" stroke="url(#rainbow)" stroke-width="24" stroke-linecap="round" filter="url(#shadow)"/>
+<g text-anchor="middle">
+ <text x="800" y="235" fill="#e5c984" font-family="Georgia,serif" font-size="30" letter-spacing="9">LOVE THAT COVERS</text>
+ <text x="800" y="335" fill="#fffaf4" font-family="Georgia,serif" font-size="82" font-weight="700">LGBTQIA+ Edition</text>
+ <text x="800" y="395" fill="#eadfe6" font-family="Arial,sans-serif" font-size="25" letter-spacing="3">A STORY OF BELONGING · HEALING · GRACE · LOVE</text>
+</g>
+<circle cx="800" cy="520" r="7" fill="#d9b26c"/><circle cx="770" cy="520" r="4" fill="#fff" opacity=".7"/><circle cx="830" cy="520" r="4" fill="#fff" opacity=".7"/>
+</svg>
