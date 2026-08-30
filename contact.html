@@ -1,100 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Love That Covers</title>
-
-  <link rel="stylesheet" href="lgbtq-theme.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Love That Covers LGBTQIA+ Edition</title>
+<meta name="description" content="Contact Bradley Hobbs about Love That Covers LGBTQIA+ Edition.">
+<link rel="stylesheet" href="lgbtq-theme.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+.contact-page{padding:55px 0 25px}.contact-shell{width:min(860px,calc(100% - 40px));margin:0 auto}.contact-intro{text-align:center;width:min(650px,100%);margin:0 auto 32px}.contact-intro h2{font-family:'Playfair Display',Georgia,serif;color:var(--accent-dark);font-size:clamp(1.9rem,4vw,2.7rem);margin:0 0 12px}.contact-intro p{color:var(--muted);line-height:1.8}.contact-panel{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:clamp(28px,5vw,48px);box-shadow:var(--shadow)}.contact-panel h2{font-family:'Playfair Display',Georgia,serif;color:var(--accent-dark);margin:0 0 22px;font-size:1.8rem}.contact-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.contact-option{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface-soft)}.contact-option strong{display:block;font-family:'Playfair Display',Georgia,serif;color:var(--accent-dark);font-size:1.1rem;margin-bottom:8px}.contact-option p{margin:0;color:var(--muted);line-height:1.6}.contact-option a{color:var(--accent);font-weight:600;text-decoration:none;overflow-wrap:anywhere}.contact-option a:hover{text-decoration:underline}.contact-closing{margin:28px auto 0;text-align:center;font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;color:var(--accent-dark)}@media(max-width:680px){.contact-page{padding-top:38px}.contact-shell{width:min(100% - 28px,620px)}.contact-panel{padding:25px 20px;border-radius:22px}.contact-options{grid-template-columns:1fr}}
+</style>
 </head>
-
 <body>
-
-<!-- HEADER -->
 <div id="header"></div>
-
-<!-- HERO -->
-<section class="hero">
-
-  <h1>Contact</h1>
-
-  <p class="hero-text">
-    You are welcome here. Your voice matters. Your story matters.
-  </p>
-
-</section>
-
+<main>
+<section class="hero" style="padding:46px 20px 58px"><div class="hero-copy"><p class="edition-label">LOVE THAT COVERS · LGBTQIA+ EDITION</p><h1>Contact</h1><p class="hero-text">You are welcome here. Your voice matters. Your story matters.</p></div></section>
 <div class="rainbow-line"></div>
-
-<!-- CONTENT -->
-<section class="cards-wrapper">
-  <div class="cards-container">
-
-    <!-- INTRO -->
-    <div class="card contact-full">
-      <h2>Reach Out</h2>
-
-      <p>
-        Whether you have a question, a story, or simply need to be heard, this space is open. If this book has spoken to you in any way, I would truly value hearing from you.
-      </p>
-    </div>
-
-    <!-- CONTACT OPTIONS -->
-    <div class="card contact-full">
-
-      <h2>Contact Options</h2>
-
-      <div class="resource-card">
-        <p><strong>Email</strong></p>
-        <p>
-          <a href="mailto:brad.hobbs13@icloud.com">
-            brad.hobbs13@icloud.com
-          </a>
-        </p>
-      </div>
-
-      <div class="resource-card">
-        <p><strong>Personal Site</strong></p>
-        <p>
-          <a href="https://brad-hobbswd.github.io/about-me/">
-            Visit My Page
-          </a>
-        </p>
-      </div>
-
-    </div>
-
-    <!-- CLOSING -->
-    <div class="card contact-full">
-      <p>
-        You are not alone. You are seen. You are chosen. You are deeply loved.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
+<section class="contact-page"><div class="contact-shell">
+<div class="contact-intro"><h2>Reach Out</h2><p>Whether you have a question, a story, or simply need to be heard, this space is open. If this book has spoken to you in any way, I would truly value hearing from you.</p></div>
+<section class="contact-panel"><h2>Contact Options</h2><div class="contact-options"><div class="contact-option"><strong>Email</strong><p><a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a></p></div><div class="contact-option"><strong>Personal Site</strong><p><a href="https://brad-hobbswd.github.io/about-me/">Visit My Page</a></p></div></div></section>
+<p class="contact-closing">You are not alone. You are seen. You are chosen. You are deeply loved.</p>
+</div></section>
+</main>
 <div id="footer"></div>
-
-<!-- LOAD HEADER + FOOTER -->
-<script>
-fetch('/love-that-covers-lgbtqia/layout.html')
-  .then(res => res.text())
-  .then(data => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(data, 'text/html');
-
-    document.getElementById('header').innerHTML =
-      doc.querySelector('#site-header').innerHTML;
-
-    document.getElementById('footer').innerHTML =
-      doc.querySelector('#site-footer').innerHTML;
-  });
-</script>
-
+<script>fetch('/love-that-covers-lgbtqia/layout.html').then(res=>res.text()).then(data=>{const parser=new DOMParser();const doc=parser.parseFromString(data,'text/html');document.getElementById('header').innerHTML=doc.querySelector('#site-header').innerHTML;document.getElementById('footer').innerHTML=doc.querySelector('#site-footer').innerHTML;});</script>
 </body>
 </html>
