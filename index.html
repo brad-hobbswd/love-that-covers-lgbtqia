@@ -1,112 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Love That Covers | LGBTQIA+ Edition</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="lgbtq-theme.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love That Covers | LGBTQIA+ Edition</title>
+<meta name="description" content="Love That Covers | LGBTQIA+ Edition. A story of belonging, healing, grace, and love for those who have carried silence, rejection, and questions.">
+<link rel="stylesheet" href="lgbtq-theme.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<!-- HEADER -->
 <div id="header"></div>
-
-<!-- HERO -->
+<main>
 <section class="hero">
-
-  <img src="0C57556B-64CB-42F0-B5E5-9DD0FEE781D7.png"
-       class="banner-main"
-       alt="Love That Covers Banner">
-
-  <p class="hero-text">
-    A story for those who have carried silence, rejection, and questions,
-    yet still long to know they are fully seen, deeply loved,
-    and never beyond the reach of God’s grace.
-  </p>
-
-  <a href="book.html" class="button">Enter the Story</a>
-
+<div class="hero-banner-wrap">
+<img src="0C57556B-64CB-42F0-B5E5-9DD0FEE781D7.png" class="banner-main" alt="Love That Covers LGBTQIA+ Edition">
+</div>
+<div class="hero-copy">
+<p class="edition-label">LOVE THAT COVERS · LGBTQIA+ EDITION</p>
+<h1>Love That Covers</h1>
+<p class="hero-text">A story for those who have carried silence, rejection, and questions, yet still long to know they are fully seen, deeply loved, and never beyond the reach of God’s grace.</p>
+<a href="book.html" class="button">Enter the Story</a>
+</div>
 </section>
-
 <div class="rainbow-line"></div>
-
-<!-- CARDS -->
 <section class="cards-wrapper">
-  <div class="cards-container">
-
-    <div class="card">
-      <h2>Love That Covers</h2>
-      <p>
-        Love is not measured by perfection. It is not limited by human judgment.
-        It reaches into the deepest places, restoring what has been broken and
-        holding what others have cast aside.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>The Quilt</h2>
-      <p>
-        Each patch carries a story, a prayer, a moment of grace.
-        Woven together, they become a testimony of connection, healing,
-        and a love that continues to move from one life to another.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>This Space Is For You</h2>
-      <p>
-        For those who have felt unseen.<br>
-        For those who have questioned where they belong.<br>
-        For those who have wondered if love could truly reach them.<br><br>
-        You are not outside of love. You are not beyond grace.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Stories</h2>
-      <p>
-        These stories carry honesty, struggle, and restoration.
-        They reveal how love transforms pain into purpose and
-        how connection rebuilds what rejection tried to break.
-      </p>
-
-      <a href="stories.html" class="button">Read the Stories</a>
-    </div>
-
-  </div>
+<div class="cards-container">
+<article class="card"><h2>Love That Covers</h2><p>Love is not measured by perfection. It is not limited by human judgment. It reaches into the deepest places, restoring what has been broken and holding what others have cast aside.</p></article>
+<article class="card"><h2>The Quilt</h2><p>Each patch carries a story, a prayer, a moment of grace. Woven together, they become a testimony of connection, healing, and a love that continues to move from one life to another.</p></article>
+<article class="card"><h2>This Space Is For You</h2><p>For those who have felt unseen. For those who have questioned where they belong. For those who have wondered if love could truly reach them.</p><p>You are not outside of love. You are not beyond grace.</p></article>
+<article class="card"><h2>Stories</h2><p>These stories carry honesty, struggle, and restoration. They reveal how love transforms pain into purpose and how connection rebuilds what rejection tried to break.</p><a href="stories.html" class="button">Read the Stories</a></article>
+</div>
 </section>
-
-<!-- CLOSING -->
-<section style="text-align: center; margin: 60px 20px;">
-  <p style="max-width: 600px; margin: auto; color: #6B5A52;">
-    You are deeply loved. Fully seen. Eternally cherished.
-  </p>
-</section>
-
-<!-- FOOTER -->
+<section class="closing-message"><p>You are deeply loved. Fully seen. Eternally cherished.</p></section>
+</main>
 <div id="footer"></div>
-
-<!-- LOAD HEADER + FOOTER -->
 <script>
-fetch('/love-that-covers-lgbtqia/layout.html')
-  .then(res => res.text())
-  .then(data => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(data, 'text/html');
-
-    document.getElementById('header').innerHTML =
-      doc.querySelector('#site-header').innerHTML;
-
-    document.getElementById('footer').innerHTML =
-      doc.querySelector('#site-footer').innerHTML;
-  });
+fetch('/love-that-covers-lgbtqia/layout.html').then(res=>res.text()).then(data=>{const parser=new DOMParser();const doc=parser.parseFromString(data,'text/html');document.getElementById('header').innerHTML=doc.querySelector('#site-header').innerHTML;document.getElementById('footer').innerHTML=doc.querySelector('#site-footer').innerHTML;});
 </script>
-
 </body>
 </html>
