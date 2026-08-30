@@ -1,93 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Store | Love That Covers</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="lgbtq-theme.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store | Love That Covers LGBTQIA+ Edition</title>
+<meta name="description" content="Love That Covers LGBTQIA+ Edition book. Coming soon.">
+<link rel="stylesheet" href="lgbtq-theme.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+.store-page{padding:58px 0 25px}.store-shell{width:min(900px,calc(100% - 40px));margin:0 auto}.store-card{background:var(--surface);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:clamp(28px,5vw,52px);display:grid;grid-template-columns:minmax(230px,310px) 1fr;gap:48px;align-items:center}.cover-wrap{display:flex;justify-content:center}.cover-wrap img{display:block;width:min(100%,300px);height:auto;border-radius:10px;box-shadow:0 20px 38px rgba(40,25,35,.18)}.store-copy .kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;font-weight:700;color:var(--accent);margin:0 0 10px}.store-copy h2{font-family:'Playfair Display',Georgia,serif;color:var(--accent-dark);font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:0 0 16px}.store-copy p{color:var(--muted);line-height:1.8;margin:0 0 18px}.coming-soon{display:inline-flex;align-items:center;gap:9px;padding:9px 15px;border-radius:999px;background:var(--surface-soft);border:1px solid var(--line);color:var(--accent-dark);font-size:.82rem;font-weight:700;letter-spacing:.05em}.coming-soon:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}.store-note{width:min(650px,calc(100% - 40px));margin:38px auto 0;text-align:center;color:var(--muted);font-family:'Playfair Display',Georgia,serif;font-size:1.12rem;line-height:1.7}@media(max-width:720px){.store-page{padding-top:38px}.store-shell{width:min(100% - 28px,560px)}.store-card{grid-template-columns:1fr;gap:30px;padding:25px 20px;border-radius:22px}.cover-wrap img{width:min(100%,270px)}.store-copy{text-align:center}.store-copy .kicker{margin-bottom:8px}}
+</style>
 </head>
-
 <body>
-
-<!-- HEADER -->
 <div id="header"></div>
-
-<!-- HERO STYLE INTRO -->
-<section class="hero">
-
-  <h1>Love That Covers</h1>
-
-  <p class="hero-text">
-    A message of healing, belonging, and the covering love of Jesus.
-    Created for those who have felt unseen, unheard, or pushed aside,
-    yet still carry a desire to be known and held in grace.
-  </p>
-
-</section>
-
+<main>
+<section class="hero" style="padding:46px 20px 58px"><div class="hero-copy"><p class="edition-label">LOVE THAT COVERS · LGBTQIA+ EDITION</p><h1>The Book</h1><p class="hero-text">A message of healing, belonging, and the covering love of Jesus.</p></div></section>
 <div class="rainbow-line"></div>
-
-<!-- STORE SECTION -->
-<section class="cards-wrapper">
-
-  <div class="cards-container">
-
-    <div class="card" style="max-width: 320px; text-align: center;">
-
-      <img src="C61C2DB3-86AD-4EA9-A7C0-138A3BE9BBAC.png"
-           alt="Love That Covers Book Cover"
-           style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
-
-
-      <p>
-        A story of restoration, identity, and a love that never turns away.
-        This book speaks into silence and brings truth wrapped in grace.
-      </p>
-
-      <p style="color: var(--accent-red); font-weight: 600;">
-        Coming Soon
-      </p>
-
-      <a class="button" style="background:#B8AAA0; pointer-events:none;">
-        Available Soon
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CLOSING -->
-<section style="text-align: center; margin: 60px 20px;">
-  <p style="max-width: 600px; margin: auto; color: #6B5A52;">
-    A love that covers is still reaching, still restoring, and still calling.
-  </p>
-</section>
-
-<!-- FOOTER -->
+<section class="store-page"><div class="store-shell"><article class="store-card"><div class="cover-wrap"><img src="C61C2DB3-86AD-4EA9-A7C0-138A3BE9BBAC.png" alt="Love That Covers LGBTQIA+ Edition book cover"></div><div class="store-copy"><p class="kicker">LGBTQIA+ Edition</p><h2>Love That Covers</h2><p>A story of restoration, identity, and a love that never turns away. This book speaks into silence and brings truth wrapped in grace.</p><span class="coming-soon">Coming Soon</span></div></article><p class="store-note">A love that covers is still reaching, still restoring, and still calling.</p></div></section>
+</main>
 <div id="footer"></div>
-
-<!-- LOAD HEADER + FOOTER (YOUR SYSTEM) -->
-<script>
-fetch('/love-that-covers-lgbtqia/layout.html')
-  .then(res => res.text())
-  .then(data => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(data, 'text/html');
-
-    document.getElementById('header').innerHTML =
-      doc.querySelector('#site-header').innerHTML;
-
-    document.getElementById('footer').innerHTML =
-      doc.querySelector('#site-footer').innerHTML;
-  });
-</script>
-
+<script>fetch('/love-that-covers-lgbtqia/layout.html').then(res=>res.text()).then(data=>{const parser=new DOMParser();const doc=parser.parseFromString(data,'text/html');document.getElementById('header').innerHTML=doc.querySelector('#site-header').innerHTML;document.getElementById('footer').innerHTML=doc.querySelector('#site-footer').innerHTML;});</script>
 </body>
 </html>
