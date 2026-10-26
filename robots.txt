@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brad-hobbswd.github.io/love-that-covers-lgbtqia/sitemap.xml
