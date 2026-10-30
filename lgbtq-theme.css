@@ -2066,3 +2066,8 @@ footer.footer .footer-checker,
   #footer .footer-copy{font-size:.73rem!important}
   #footer .footer-legal-links{gap:8px 15px!important}
 }
+
+
+/* Give chapter navigation breathing room before the shared footer */
+.chapter-nav{margin-bottom:58px!important}
+@media(max-width:650px){.chapter-nav{margin-bottom:44px!important}}
