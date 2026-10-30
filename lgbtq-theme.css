@@ -1859,3 +1859,73 @@ footer.footer .footer-checker,
  #site-header .navbar{width:calc(100% - 26px)!important}
  #site-header .nav-menu>summary{min-width:78px!important;min-height:38px!important;padding:8px 10px!important}
 }
+
+
+/* Footer alignment: keep the complete footer within the same page content width */
+#footer{
+  width:100%!important;
+  max-width:100%!important;
+  padding:0 clamp(16px,4vw,36px)!important;
+  margin:0 auto!important;
+}
+#footer > footer.footer,
+#footer footer.footer{
+  box-sizing:border-box!important;
+  width:min(1120px,100%)!important;
+  max-width:1120px!important;
+  margin:0 auto!important;
+  padding:0 38px 30px!important;
+  border-radius:0!important;
+  overflow:hidden!important;
+  background-color:#392d29!important;
+  background-image:conic-gradient(
+    #514039 25%,
+    #392d29 0 50%,
+    #514039 0 75%,
+    #392d29 0
+  )!important;
+  background-size:52px 52px!important;
+  background-repeat:repeat!important;
+}
+#footer .footer-checker{
+  display:none!important;
+}
+#footer .footer-grid{
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 auto!important;
+  padding:42px 0 0!important;
+  grid-template-columns:1.25fr .7fr 1.15fr!important;
+  gap:34px!important;
+}
+#footer .footer-grid section{
+  max-width:none!important;
+  width:auto!important;
+  text-align:left!important;
+}
+#footer .footer-copy{
+  width:100%!important;
+  max-width:100%!important;
+  margin:28px auto 0!important;
+  padding-top:18px!important;
+  text-align:center!important;
+  border-top:1px solid rgba(243,234,223,.24)!important;
+}
+@media(max-width:760px){
+  #footer{padding:0 14px!important}
+  #footer > footer.footer,
+  #footer footer.footer{
+    width:100%!important;
+    padding:0 22px 24px!important;
+    background-size:42px 42px!important;
+  }
+  #footer .footer-grid{
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+    padding-top:32px!important;
+  }
+  #footer .footer-grid section{
+    text-align:left!important;
+  }
+  #footer .footer-copy{margin-top:24px!important}
+}
