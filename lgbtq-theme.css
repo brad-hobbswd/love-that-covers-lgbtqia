@@ -7,3 +7,21 @@ body{background:var(--paper-light);color:var(--ink);line-height:1.75}body:before
 .hero-banner-wrap{width:min(100% - 40px,1120px);max-height:390px;margin:28px auto 0;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .banner-main{display:block;width:100%;max-width:100%;height:auto;max-height:350px;object-fit:contain;object-position:center;margin:0 auto;border-radius:10px}
 @media(max-width:700px){.hero-banner-wrap{width:calc(100% - 28px);max-height:230px;margin:18px auto 0;padding:7px}.banner-main{max-height:205px;border-radius:7px}}
+
+/* Mobile navigation dropdown overlays content instead of pushing the page */
+@media(max-width:900px){
+  #site-header{position:relative;z-index:1000}
+  .navbar{position:relative;align-items:center;flex-direction:row;min-height:76px;gap:12px;padding:10px 18px}
+  .brand-mark{font-size:1rem;white-space:normal}
+  .brand-mark small{font-size:.56rem}
+  .brand-heart{width:38px;height:38px;flex:0 0 38px}
+  .nav-menu{position:relative;width:auto;flex:0 0 auto;margin-left:auto}
+  .nav-menu summary{display:flex;align-items:center;justify-content:center;gap:9px;min-width:92px;padding:10px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--accent-dark);font-weight:700;list-style:none;cursor:pointer}
+  .nav-menu summary::-webkit-details-marker{display:none}
+  .menu-icon{font-size:1.1rem;line-height:1}
+  .nav-links,.nav-menu[open] .nav-links{display:none;position:absolute;top:calc(100% + 10px);right:0;width:min(82vw,290px);padding:8px 14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 34px rgba(45,32,25,.2);z-index:1100}
+  .nav-menu[open] .nav-links{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .nav-links a{display:block;padding:11px 5px;border-bottom:1px solid #d4c0a688}
+  .nav-links a:last-child{border-bottom:0}
+}
+@media(max-width:420px){.navbar{padding:9px 12px}.brand-mark{gap:8px;font-size:.9rem}.brand-heart{width:34px;height:34px;flex-basis:34px}.nav-menu summary{min-width:82px;padding:9px 11px}}
