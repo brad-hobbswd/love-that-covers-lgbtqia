@@ -910,3 +910,32 @@ body{background:var(--paper-light)!important;color:var(--ink)!important}
  .book-cover-frame img{width:min(78%,310px)}
  .book-pages-grid{grid-template-columns:1fr}
 }
+
+
+/* Restore the checkered quilt detail in the footer */
+.footer{border-top:0!important;border-image:none!important}
+.footer .footer-quilt{
+  display:grid!important;
+  grid-template-columns:repeat(7,28px);
+  gap:4px!important;
+  width:max-content!important;
+  margin:0 auto 24px!important;
+  padding:0!important;
+}
+.footer .footer-quilt span{
+  display:block!important;
+  width:28px!important;
+  height:28px!important;
+  flex:none!important;
+  transform:none!important;
+  border:1px solid rgba(255,255,255,.28)!important;
+  border-radius:2px!important;
+}
+.footer .footer-quilt span:nth-child(1),
+.footer .footer-quilt span:nth-child(3),
+.footer .footer-quilt span:nth-child(5),
+.footer .footer-quilt span:nth-child(7){transform:translateY(5px)!important}
+@media(max-width:700px){
+  .footer .footer-quilt{grid-template-columns:repeat(7,23px);gap:3px!important}
+  .footer .footer-quilt span{width:23px!important;height:23px!important}
+}
