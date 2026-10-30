@@ -1929,3 +1929,19 @@ footer.footer .footer-checker,
   }
   #footer .footer-copy{margin-top:24px!important}
 }
+
+
+/* Give the publication title stronger prominence in the footer */
+#footer .footer-grid .footer-about .footer-name{
+  font-size:clamp(2.25rem,3.2vw,2.8rem)!important;
+  line-height:1.08!important;
+  font-weight:600!important;
+  letter-spacing:-.025em!important;
+  margin:0 0 12px!important;
+}
+@media(max-width:760px){
+  #footer .footer-grid .footer-about .footer-name{
+    font-size:2.35rem!important;
+    line-height:1.08!important;
+  }
+}
