@@ -1987,3 +1987,82 @@ footer.footer .footer-checker,
   #footer footer.footer{border-top-width:5px!important}
   #footer .footer-legal-heading{margin-top:18px!important}
 }
+
+
+/* Compact footer hierarchy for quicker reading */
+#footer .footer-grid{
+  grid-template-columns:1.1fr .65fr 1fr!important;
+  gap:26px!important;
+  padding-top:30px!important;
+}
+#footer .footer-grid h3{
+  margin:0 0 10px!important;
+  font-size:.94rem!important;
+  line-height:1.35!important;
+}
+#footer .footer-grid p{
+  margin:0 0 10px!important;
+  font-size:.88rem!important;
+  line-height:1.6!important;
+}
+#footer .footer-explore a{
+  display:block!important;
+  margin:0 0 7px!important;
+  font-size:.86rem!important;
+  line-height:1.45!important;
+}
+#footer .footer-about .footer-name{margin-bottom:5px!important}
+#footer .footer-about .footer-book{margin-bottom:8px!important}
+#footer .donation-buttons{gap:8px!important;flex-wrap:wrap!important}
+#footer .donate-btn{padding:8px 13px!important;font-size:.78rem!important}
+#footer .footer-bottom{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  flex-wrap:wrap!important;
+  gap:10px 20px!important;
+  width:100%!important;
+  margin:20px auto 0!important;
+  padding:13px 0 0!important;
+  border-top:1px solid rgba(243,234,223,.26)!important;
+}
+#footer .footer-copy{
+  width:auto!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  text-align:left!important;
+  font-size:.76rem!important;
+  line-height:1.5!important;
+}
+#footer .footer-legal-links{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  gap:8px 17px!important;
+}
+#footer .footer-legal-links a{
+  color:#e5dbd0!important;
+  font-size:.78rem!important;
+  line-height:1.5!important;
+  text-decoration:underline!important;
+  text-decoration-color:rgba(229,219,208,.45)!important;
+  text-underline-offset:3px!important;
+}
+#footer .footer-legal-links a:hover{color:#fffaf2!important}
+@media(max-width:760px){
+  #footer .footer-grid{gap:18px!important;padding-top:24px!important}
+  #footer .footer-grid section+section{
+    border-left:0!important;
+    border-top:1px solid rgba(235,215,190,.22)!important;
+    padding:17px 0 0!important;
+  }
+  #footer .footer-bottom{
+    align-items:flex-start!important;
+    flex-direction:column!important;
+    gap:9px!important;
+    margin-top:18px!important;
+  }
+  #footer .footer-copy{font-size:.73rem!important}
+  #footer .footer-legal-links{gap:8px 15px!important}
+}
