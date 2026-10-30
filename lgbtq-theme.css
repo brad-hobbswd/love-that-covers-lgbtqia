@@ -1961,3 +1961,29 @@ footer.footer .footer-checker,
   #footer .footer-grid .footer-about .footer-name,
   #footer .footer-name{font-size:1.25rem!important}
 }
+
+
+/* Footer finishing details: rainbow rule and clearly grouped legal links */
+#footer footer.footer{
+  border-top:5px solid transparent!important;
+  border-image:linear-gradient(90deg,#d84b45 0%,#e99a42 16%,#e8cf55 32%,#6e9d68 48%,#4d91a9 64%,#625b9a 80%,#9a6594 100%) 1!important;
+}
+#footer .footer-legal-heading{
+  margin:20px 0 8px!important;
+  color:#e8c99f!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:.95rem!important;
+  font-weight:600!important;
+}
+#footer .footer-explore a[href*="copyright"],
+#footer .footer-explore a[href*="terms"],
+#footer .footer-explore a[href*="privacy"]{
+  display:block!important;
+  margin:5px 0!important;
+  color:#e5dbd0!important;
+  font-size:.88rem!important;
+}
+@media(max-width:760px){
+  #footer footer.footer{border-top-width:5px!important}
+  #footer .footer-legal-heading{margin-top:18px!important}
+}
