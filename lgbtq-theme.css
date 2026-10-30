@@ -141,3 +141,43 @@ body>main{display:block;width:100%;max-width:100%;margin:0 auto}
 .prayer-navigation{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;width:min(760px,calc(100% - 32px));margin:34px auto 44px}
 .prayer-navigation .button{min-width:145px;text-align:center}
 @media(max-width:600px){.prayer-hero{padding:36px 16px 24px}.prayer-space{padding:24px 14px 32px}.prayer-text{padding:24px 20px;border-radius:17px;font-size:.98rem;line-height:1.8}.prayer-text p{margin-bottom:17px}.prayer-closing{padding:28px 18px 32px}.prayer-navigation{width:calc(100% - 28px);margin:26px auto 34px;gap:10px}.prayer-navigation .button{flex:1 1 130px;min-width:0}}
+
+/* The Book page: complete, consistent section styling */
+.book-hero{width:100%;padding:clamp(42px,6vw,72px) 20px 48px!important;text-align:center;background:linear-gradient(180deg,#eadbc8 0%,#f7f1e8 100%)!important}
+.book-hero .edition-label{display:block;margin:0 0 12px;color:var(--accent-dark)!important;font-size:.72rem;line-height:1.6;letter-spacing:.16em}
+.book-hero h1{margin:0 0 14px!important;font-family:"Playfair Display",Georgia,serif!important;font-size:clamp(2.35rem,6vw,4.2rem)!important;line-height:1.12;color:var(--accent-dark)!important}
+.book-hero .hero-text{max-width:700px;margin:0 auto!important;color:var(--ink);font-size:clamp(1rem,1.5vw,1.12rem);line-height:1.8}
+.book-cover-section{width:min(1000px,calc(100% - 40px));margin:clamp(32px,5vw,58px) auto!important;text-align:center}
+.book-cover-frame{width:min(390px,100%);padding:12px!important;background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:20px!important;box-shadow:var(--shadow)!important}
+.book-cover-frame img{width:100%;height:auto;object-fit:contain}
+.book-cover-caption{margin:20px auto 0!important}
+.book-cover-caption h2{margin:0 0 6px;color:var(--accent-dark);font-family:"Playfair Display",Georgia,serif;font-size:1.65rem}
+.book-cover-caption p{margin:0;color:var(--muted);font-weight:600;letter-spacing:.06em}
+.book-content{width:min(1000px,calc(100% - 40px));margin:0 auto 36px!important}
+.book-page-intro{margin:0 auto 38px!important}
+.book-content>.book-card-full{width:100%;margin:0 auto!important;padding:clamp(24px,4vw,38px)!important;background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:20px!important;box-shadow:0 9px 28px rgba(69,48,35,.07)!important}
+.book-card-full h2{margin:0 0 14px!important;color:var(--accent-dark)!important;font-family:"Playfair Display",Georgia,serif!important;font-size:clamp(1.45rem,2.5vw,1.9rem)!important;line-height:1.25}
+.book-card-full p{margin:0 0 16px;color:var(--ink);font-size:1rem;line-height:1.85}
+.book-card-full p:last-of-type{margin-bottom:16px}
+.section-kicker{margin:0 0 10px!important;color:var(--accent)!important;font-size:.7rem;line-height:1.5;letter-spacing:.16em}
+.cards-wrapper .cards-container{width:min(1080px,100%);grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:22px}
+.cards-wrapper .book-card-full{height:100%;display:flex;flex-direction:column;align-items:flex-start;margin:0!important;padding:clamp(22px,3vw,32px)!important;background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:20px!important;box-shadow:0 9px 28px rgba(69,48,35,.07)!important}
+.cards-wrapper .book-card-full .button{margin-top:auto!important;align-self:flex-start}
+.book-page-intro .book-card-full .button{margin-top:8px}
+.book-page-intro+.cards-wrapper{padding-top:42px;padding-bottom:42px}
+.book-page-intro+.cards-wrapper .cards-container{max-width:1080px}
+.book-hero+.rainbow-line{width:100%;height:6px;background:var(--rainbow)}
+body:has(.book-hero) .closing-message{margin-top:0;padding:clamp(38px,5vw,58px) 20px!important}
+body:has(.book-hero) .closing-message p{max-width:760px;margin:0 auto 22px!important}
+@media(max-width:700px){
+ .book-hero{padding:36px 18px 32px!important}
+ .book-cover-section{width:calc(100% - 28px);margin:28px auto 34px!important}
+ .book-cover-frame{max-width:330px;padding:8px!important;border-radius:16px!important}
+ .book-cover-caption h2{font-size:1.45rem}
+ .book-content{width:calc(100% - 28px);margin-bottom:26px!important}
+ .book-content>.book-card-full{padding:23px 20px!important;border-radius:17px!important}
+ .book-card-full p{font-size:.96rem;line-height:1.78}
+ .cards-wrapper .cards-container{grid-template-columns:1fr;gap:16px}
+ .cards-wrapper .book-card-full{padding:23px 20px!important}
+ .book-page-intro+.cards-wrapper{padding:30px 14px!important}
+}
