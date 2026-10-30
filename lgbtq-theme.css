@@ -1713,3 +1713,41 @@ footer.footer{
  #site-header .brand-mark{font-size:1.12rem!important}
  #site-header .brand-mark small{font-size:.52rem!important;letter-spacing:.09em!important}
 }
+
+
+/* Correction: put the check pattern directly on the footer surface.
+   Do not place it behind a pseudo-element or hide it inside an inset panel. */
+footer.footer,
+#footer footer.footer{
+  position:relative!important;
+  isolation:auto!important;
+  background-color:#392d29!important;
+  background-image:
+    conic-gradient(
+      #514039 25%,
+      #392d29 0 50%,
+      #514039 0 75%,
+      #392d29 0
+    )!important;
+  background-size:36px 36px!important;
+  background-position:0 0!important;
+  background-repeat:repeat!important;
+  color:#f3eadf!important;
+  border:0!important;
+  padding:46px 24px 24px!important;
+}
+footer.footer::before,
+footer.footer::after,
+#footer footer.footer::before,
+#footer footer.footer::after{
+  content:none!important;
+  display:none!important;
+}
+footer.footer .footer-checker,
+#footer footer.footer .footer-checker{display:none!important}
+@media(max-width:760px){
+  footer.footer,#footer footer.footer{
+    background-size:30px 30px!important;
+    padding:36px 22px 22px!important;
+  }
+}
