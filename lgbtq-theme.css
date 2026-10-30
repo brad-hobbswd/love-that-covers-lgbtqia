@@ -181,3 +181,316 @@ body:has(.book-hero) .closing-message p{max-width:760px;margin:0 auto 22px!impor
  .cards-wrapper .book-card-full{padding:23px 20px!important}
  .book-page-intro+.cards-wrapper{padding:30px 14px!important}
 }
+
+
+/* EDITORIAL REDESIGN: layered quilt textures, stronger hierarchy, and intentional page rhythm */
+:root{
+  --ink:#352923;
+  --muted:#746257;
+  --paper-light:#f8f3eb;
+  --surface:#fffdf8;
+  --surface-soft:#efe3d3;
+  --line:#d9c5aa;
+  --accent:#a94335;
+  --accent-dark:#762e29;
+  --gold:#bd873d;
+  --shadow:0 20px 50px rgba(67,45,32,.13);
+}
+body{
+  background:
+    radial-gradient(ellipse at 12% 8%,rgba(197,139,62,.09),transparent 28rem),
+    radial-gradient(ellipse at 92% 35%,rgba(84,129,155,.08),transparent 30rem),
+    linear-gradient(180deg,#fbf7f0 0%,#f4ecdf 100%);
+  color:var(--ink);
+}
+#site-header{
+  background:rgba(251,247,240,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(185,151,113,.45);
+  box-shadow:0 8px 28px rgba(62,43,31,.08);
+}
+#site-header .navbar{min-height:86px}
+#site-header .brand-mark{font-size:1.18rem;letter-spacing:-.02em}
+#site-header .brand-heart{
+  width:46px;height:46px;flex-basis:46px;
+  background:linear-gradient(145deg,#fff9ef,#ead8c1);
+  box-shadow:inset 0 0 0 4px rgba(255,255,255,.5),0 5px 14px rgba(69,48,35,.1);
+}
+#site-header .nav-menu>summary{
+  min-height:44px;padding:10px 17px!important;
+  background:#fffaf2;border-color:#cbb18d;
+  box-shadow:0 4px 12px rgba(69,48,35,.07);
+  transition:background .2s,transform .2s;
+}
+#site-header .nav-menu>summary:hover{background:#f0e2d0;transform:translateY(-1px)}
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:clamp(30px,5vw,62px) 0 clamp(46px,6vw,76px);
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.78),transparent 58%),
+    linear-gradient(135deg,#eadbc8 0%,#f7efe4 48%,#e9ded0 100%);
+}
+.hero:before,.book-hero:before{
+  content:"";
+  position:absolute;inset:0;
+  pointer-events:none;z-index:-1;
+  opacity:.36;
+  background-image:
+    linear-gradient(45deg,transparent 48%,rgba(255,255,255,.55) 49%,rgba(255,255,255,.55) 51%,transparent 52%),
+    linear-gradient(-45deg,transparent 48%,rgba(185,151,113,.18) 49%,rgba(185,151,113,.18) 51%,transparent 52%);
+  background-size:34px 34px;
+  mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);
+}
+.hero-copy{
+  position:relative;
+  max-width:850px;
+  padding:clamp(22px,4vw,42px) clamp(20px,4vw,46px);
+  margin:34px auto 0;
+  border:1px solid rgba(188,155,117,.48);
+  border-radius:28px;
+  background:rgba(255,251,244,.72);
+  box-shadow:0 18px 45px rgba(70,48,34,.09),inset 0 1px rgba(255,255,255,.9);
+}
+.hero-copy:before{
+  content:"";
+  display:block;width:76px;height:7px;margin:0 auto 22px;
+  border-radius:99px;background:var(--rainbow);
+}
+.hero-copy .edition-label,.edition-label{
+  color:var(--accent-dark);
+  font-size:.72rem;font-weight:800;letter-spacing:.19em;
+}
+.hero-copy h1,.hero h1,.book-hero h1,.chapter-heading h1{
+  color:var(--accent-dark);
+  font-family:"Playfair Display",Georgia,serif;
+  letter-spacing:-.035em;
+  text-wrap:balance;
+}
+.hero-copy h1{font-size:clamp(2.8rem,7vw,5.1rem);margin:0 0 17px}
+.hero-copy .hero-text{
+  max-width:700px;color:#55443a;
+  font-size:clamp(1.02rem,1.7vw,1.18rem);
+  line-height:1.9;
+}
+.hero-banner-wrap{
+  border:9px solid rgba(255,250,242,.92);
+  outline:1px solid #cbb18d;
+  border-radius:22px;
+  box-shadow:0 22px 55px rgba(61,42,30,.18);
+}
+.banner-main{border-radius:10px}
+.rainbow-line{
+  height:7px;
+  box-shadow:0 2px 8px rgba(75,49,35,.12);
+}
+.cards-wrapper{
+  position:relative;
+  padding:clamp(46px,6vw,78px) clamp(16px,4vw,38px);
+  background:linear-gradient(180deg,#f8f3eb 0%,#efe4d5 100%);
+}
+.cards-container{
+  width:min(1120px,100%);
+  gap:clamp(17px,2.3vw,28px);
+}
+.cards-container .card,.card,.book-card-full,.about-card,.chapter-card,.story-card{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(155deg,#fffdf9 0%,#fff9ef 100%);
+  border:1px solid #ddc9ae;
+  border-radius:23px;
+  box-shadow:0 12px 30px rgba(65,45,32,.075);
+}
+.cards-container .card{
+  padding:clamp(25px,3.2vw,38px);
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.cards-container .card:before,.book-card-full:before,.about-card:before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
+  background:var(--rainbow);
+}
+.cards-container .card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 22px 42px rgba(65,45,32,.13);
+  border-color:#c6a77e;
+}
+.cards-container .card h2,.card h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(1.45rem,2.4vw,1.85rem);
+  color:var(--accent-dark);line-height:1.25;
+}
+.cards-container .card p,.card p{
+  color:#66554a;line-height:1.9;
+}
+.button,.donate-btn{
+  background:linear-gradient(135deg,#a94335,#85352e);
+  border:1px solid #762e29;
+  box-shadow:0 7px 16px rgba(128,49,41,.2);
+  transition:transform .2s,box-shadow .2s,background .2s;
+}
+.button:hover,.donate-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 11px 22px rgba(128,49,41,.25);
+}
+.closing-message{
+  position:relative;
+  padding:clamp(48px,7vw,82px) 22px;
+  background:
+    radial-gradient(ellipse at center,rgba(255,255,255,.78),transparent 70%),
+    linear-gradient(135deg,#e8d7c2,#f7efe3 52%,#e7d9c8);
+}
+.closing-message:before,.closing-message:after{
+  content:"";display:block;width:54px;height:54px;margin:0 auto 18px;
+  border:7px solid rgba(185,71,59,.16);
+  transform:rotate(45deg);
+}
+.closing-message:after{display:none}
+.closing-message p{
+  font-size:clamp(1.65rem,3.6vw,2.35rem);
+  font-weight:600;letter-spacing:-.02em;
+}
+.footer{
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.035) 25%,transparent 25%) 0 0/22px 22px,
+    linear-gradient(315deg,rgba(255,255,255,.035) 25%,transparent 25%) 0 0/22px 22px,
+    #382c28;
+  border-top:7px solid transparent;
+  border-image:var(--rainbow) 1;
+}
+.footer .footer-name{font-size:1.9rem!important;letter-spacing:.01em}
+.footer .footer-book{color:#e8c99f!important;letter-spacing:.04em}
+.footer .footer-message{max-width:620px!important}
+.footer .donate-btn{min-width:150px!important}
+.stories-page{
+  padding:clamp(42px,6vw,72px) 0 54px;
+  background:linear-gradient(180deg,#f8f3eb,#f1e7d9);
+}
+.stories-intro{
+  max-width:790px;padding:22px 30px;margin:0 auto 38px;
+  border-block:1px solid #d9c5aa;
+}
+.stories-intro p{
+  margin:0;color:#5f4c40;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(1.2rem,2.2vw,1.55rem);
+}
+.story-grid{gap:22px}
+.story-card,.story-card:visited{
+  min-height:210px;padding:30px 32px 32px 36px;
+  border-radius:8px 24px 24px 24px;
+  box-shadow:0 12px 28px rgba(65,45,32,.08);
+}
+.story-card:after{
+  content:"";position:absolute;right:-23px;bottom:-23px;
+  width:82px;height:82px;border:12px solid rgba(189,135,61,.12);
+  transform:rotate(45deg);pointer-events:none;
+}
+.story-card:before{height:6px;margin-bottom:24px}
+.story-card h2,.story-card:visited h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(1.55rem,2.5vw,1.9rem);
+  line-height:1.2;
+}
+.story-card p,.story-card:visited p{font-size:.98rem;line-height:1.85}
+.story-card:hover{
+  transform:translateY(-5px);
+  border-color:#c5a77e;
+  box-shadow:0 22px 42px rgba(65,45,32,.14);
+}
+.stories-note{
+  padding:34px 28px!important;
+  background:linear-gradient(135deg,#eee0ce,#fffaf2)!important;
+  box-shadow:0 12px 28px rgba(65,45,32,.06);
+}
+.chapter-page{
+  padding:clamp(42px,6vw,76px) 0 30px;
+  background:linear-gradient(180deg,#f6eee3,#fbf8f2);
+}
+.chapter-heading{margin-bottom:38px}
+.chapter-heading .kicker{
+  display:inline-block;padding:7px 15px;
+  border:1px solid #d8c2a5;border-radius:99px;
+  background:#fffaf2;
+}
+.chapter-heading h1{font-size:clamp(2.8rem,6vw,4.8rem)}
+.chapter-heading h2{font-size:clamp(1.45rem,3vw,2.1rem);color:#806b5d}
+.chapter-card{
+  max-width:850px;margin:0 auto;
+  padding:clamp(32px,6vw,70px);
+  border-radius:8px 28px 28px 28px;
+  box-shadow:0 22px 55px rgba(65,45,32,.1);
+}
+.chapter-card:before{
+  content:"";position:absolute;top:0;left:0;right:0;height:7px;
+  background:var(--rainbow);
+}
+.chapter-card p{
+  color:#43372f;font-size:1.1rem;line-height:2.05;
+}
+.chapter-card p:first-child::first-letter{color:var(--accent-dark)}
+.chapter-divider{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  margin:38px auto;color:var(--gold);letter-spacing:.3em;
+}
+.chapter-nav{
+  padding:16px 18px;margin:30px auto 45px;
+  border:1px solid #ddc9ae;border-radius:999px;
+  background:rgba(255,250,242,.8);
+}
+.chapter-nav a{
+  padding:12px 21px!important;
+  background:#fffaf2!important;
+  box-shadow:0 4px 12px rgba(65,45,32,.06);
+}
+.about-page{background:linear-gradient(180deg,#f8f3eb,#f0e5d7);padding-top:clamp(42px,6vw,76px)}
+.about-card{padding:clamp(32px,5vw,64px)!important;border-radius:8px 28px 28px 28px!important}
+.about-card:before{width:7px;height:auto;position:absolute;left:0;top:0;bottom:0;margin:0}
+.about-card h1{font-family:"Playfair Display",Georgia,serif;line-height:1.15;letter-spacing:-.025em}
+.about-card p{color:#514238}
+.book-hero{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:linear-gradient(135deg,#eadbc8,#f8f1e7 52%,#e8d9c8)!important;
+}
+.book-hero h1{font-size:clamp(2.8rem,7vw,5rem)!important}
+.book-cover-frame{
+  position:relative;
+  padding:17px!important;
+  background:#fffdf8!important;
+  border:1px solid #c9ad88!important;
+  box-shadow:0 28px 60px rgba(58,39,27,.2),0 0 0 8px rgba(255,250,242,.8)!important;
+}
+.book-cover-caption h2{font-size:2rem!important}
+.book-content>.book-card-full{padding:clamp(28px,5vw,48px)!important}
+.section-kicker{
+  display:inline-block!important;
+  padding:6px 12px;
+  border-radius:99px;
+  background:#f0e3d2;
+  color:var(--accent-dark)!important;
+}
+.prayer-text,.resource-section,.contact-panel{
+  box-shadow:0 18px 42px rgba(65,45,32,.09);
+}
+@media(max-width:700px){
+  .hero{padding-bottom:38px}
+  .hero-copy{width:calc(100% - 28px);margin-top:22px;padding:26px 20px;border-radius:20px}
+  .hero-copy h1{font-size:clamp(2.35rem,11vw,3.4rem)}
+  .hero-banner-wrap{border-width:5px;border-radius:15px}
+  .cards-wrapper{padding:36px 14px}
+  .cards-container .card{padding:25px 22px 25px 26px;border-radius:17px}
+  .closing-message{padding:44px 18px}
+  .closing-message:before{width:40px;height:40px;border-width:5px}
+  .stories-page{padding:36px 0 42px}
+  .stories-intro{padding:18px 12px;margin-bottom:26px}
+  .story-grid{gap:15px}
+  .story-card,.story-card:visited{min-height:0;padding:25px 23px 26px 27px;border-radius:7px 19px 19px 19px}
+  .chapter-card{padding:30px 23px;border-radius:7px 20px 20px 20px}
+  .chapter-card p{font-size:1.02rem;line-height:1.9}
+  .chapter-nav{width:calc(100% - 28px);border-radius:20px;padding:12px}
+  .about-card{padding:28px 23px 28px 28px!important}
+  .book-cover-frame{max-width:310px;padding:11px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
