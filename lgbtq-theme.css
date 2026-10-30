@@ -871,3 +871,8 @@ body{background:var(--paper-light)!important;color:var(--ink)!important}
  #site-header .nav-menu[open] .nav-links{background:var(--surface)!important}
  #site-header .nav-menu[open] .nav-links a{color:var(--ink)!important}
 }
+
+
+/* Give the standalone quilt banner a soft lift without adding a box */
+.hero-banner-wrap{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+.banner-main{filter:drop-shadow(0 10px 16px rgba(56,45,41,.20));border:0!important;border-radius:0!important;box-shadow:none!important}
