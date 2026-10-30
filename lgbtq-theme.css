@@ -876,3 +876,9 @@ body{background:var(--paper-light)!important;color:var(--ink)!important}
 /* Give the standalone quilt banner a soft lift without adding a box */
 .hero-banner-wrap{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
 .banner-main{filter:drop-shadow(0 10px 16px rgba(56,45,41,.20));border:0!important;border-radius:0!important;box-shadow:none!important}
+
+
+/* Softly rounded corners on the banner image itself, with no enclosing frame */
+.hero-banner-wrap{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;overflow:visible!important}
+.banner-main{border:0!important;border-radius:18px!important;filter:drop-shadow(0 10px 16px rgba(56,45,41,.20))}
+@media(max-width:700px){.banner-main{border-radius:12px!important}}
