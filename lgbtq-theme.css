@@ -826,3 +826,48 @@ h1,h2,h3,.book-hero h1,.about-card h1,.story-card h2,.contact-panel h2,.store-co
  .book-hero{padding:58px 20px!important}
  .about-card,.book-card-full,.contact-panel,.store-card,.prayer-text{border-radius:18px!important}
 }
+
+
+/* Restore the LGBTQIA quilt palette while retaining the editorial layout */
+:root{
+ --paper:#e8dccb;--paper-light:#f8f3eb;--surface:#fffdf8;--surface-soft:#efe3d3;
+ --ink:#382d29;--muted:#6a5a50;--accent:#a94335;--accent-dark:#762e29;
+ --gold:#bd873d;--green:#64844a;--blue:#54819b;--indigo:#403d66;
+ --line:#d9c5aa;--serif:"Cormorant Garamond",Georgia,serif;
+ --shadow:0 20px 50px rgba(67,45,32,.13);
+ --rainbow:linear-gradient(90deg,#b9473b,#d18b3b 17%,#d8bd43 33%,#648d45 50%,#54819b 67%,#403d66 83%,#8b4777);
+}
+body{background:var(--paper-light)!important;color:var(--ink)!important}
+#site-header{background:rgba(250,245,236,.97)!important;color:var(--ink)!important;border-bottom:1px solid var(--line)!important;box-shadow:0 7px 24px rgba(69,48,35,.08)!important}
+#site-header .brand-mark{color:var(--accent-dark)!important}
+#site-header .brand-mark small{color:var(--muted)!important}
+#site-header .nav-links a{color:var(--ink)!important}
+#site-header .nav-links a:hover,#site-header .nav-links a:focus-visible{background:#efe3d3!important;color:var(--accent-dark)!important}
+#site-header .nav-menu>summary{border-color:var(--line)!important;background:var(--surface)!important;color:var(--accent-dark)!important}
+#site-header .nav-menu[open] .nav-links{background:var(--surface)!important;border-color:var(--line)!important;box-shadow:0 14px 34px rgba(69,48,35,.18)!important}
+#site-header .nav-menu[open] .nav-links a{color:var(--ink)!important;border-color:#d4c0a688!important}
+.hero{background:linear-gradient(180deg,#e8d8c2,#f1e7d9 64%,#f8f3eb)!important}
+.banner-main{border:0!important;border-radius:0!important;box-shadow:none!important}
+.intro-card,.journey-grid .card,.about-card,.book-card-full,.chapter-card,.contact-panel,.store-card,.stories-note,.prayer-text{background:var(--surface)!important}
+.intro-card h1,.section-heading h2,.journey-grid .card h3,.book-hero h1,.chapter-heading h1,.heading h1{color:var(--accent-dark)!important}
+.eyebrow,.card-number{color:var(--accent)!important}
+.pullquote{color:var(--accent-dark)!important;border-color:var(--gold)!important}
+.section-soft{background:linear-gradient(180deg,#f1e7d9,#eee2d1)!important}
+.button-primary,.donate-btn{background:var(--accent)!important;color:#fffaf2!important;border-color:var(--accent-dark)!important}
+.button-primary:hover,.donate-btn:hover{background:var(--accent-dark)!important}
+.button-outline{color:var(--accent-dark)!important;border-color:var(--accent-dark)!important}
+.cta{background:linear-gradient(135deg,#762e29,#a94335)!important}
+.cta .eyebrow{color:#f0d8ad!important}
+.footer{background:#392d29!important;border-top:5px solid transparent!important;border-image:var(--rainbow) 1!important}
+.footer .footer-book{color:#e8c99f!important}
+.footer .footer-quilt span:nth-child(1){background:#b9473b!important}
+.footer .footer-quilt span:nth-child(2){background:#d18b3b!important}
+.footer .footer-quilt span:nth-child(3){background:#d8bd43!important}
+.footer .footer-quilt span:nth-child(4){background:#648d45!important}
+.footer .footer-quilt span:nth-child(5){background:#54819b!important}
+.footer .footer-quilt span:nth-child(6){background:#403d66!important}
+.footer .footer-quilt span:nth-child(7){background:#8b4777!important}
+@media(max-width:900px){
+ #site-header .nav-menu[open] .nav-links{background:var(--surface)!important}
+ #site-header .nav-menu[open] .nav-links a{color:var(--ink)!important}
+}
