@@ -1559,3 +1559,100 @@ main .book-cover-section .book-cover-frame img{
   main .book-cover-section .book-cover-layout{grid-template-columns:1fr!important;text-align:center!important}
   main .book-cover-section .book-cover-copy{margin:0 auto!important}
 }
+
+
+/* Formalize the quilt footer while keeping the checkerboard across its full surface */
+#footer > footer.footer,
+footer.footer{
+  background-color:#342923!important;
+  background-image:conic-gradient(
+    #40332e 25%,
+    #342923 0 50%,
+    #40332e 0 75%,
+    #342923 0
+  )!important;
+  background-size:30px 30px!important;
+  background-position:0 0!important;
+  background-repeat:repeat!important;
+  color:#eee6dc!important;
+  padding:46px max(24px,calc((100% - 1120px)/2)) 24px!important;
+  border:0!important;
+}
+#footer .footer-grid{
+  display:grid!important;
+  grid-template-columns:1.25fr .65fr 1fr!important;
+  gap:42px!important;
+  align-items:start!important;
+  max-width:1120px!important;
+  margin:0 auto!important;
+}
+#footer .footer-grid section{min-width:0!important;text-align:left!important}
+#footer .footer-grid h3{
+  margin:0 0 16px!important;
+  color:#ead8b8!important;
+  font:600 .76rem/1.4 Inter,Arial,sans-serif!important;
+  letter-spacing:.13em!important;
+  text-transform:uppercase!important;
+}
+#footer .footer-name{
+  color:#fffaf2!important;
+  font:600 1.85rem/1.1 "Cormorant Garamond",Georgia,serif!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+}
+#footer .footer-book{
+  color:#e5cba5!important;
+  font:600 .76rem/1.6 Inter,Arial,sans-serif!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+#footer .footer-message,
+#footer .footer-support p{
+  max-width:390px!important;
+  color:#e0d6cb!important;
+  font:400 .92rem/1.75 Georgia,serif!important;
+}
+#footer .footer-explore a{
+  display:block!important;
+  width:fit-content!important;
+  margin:0 0 10px!important;
+  color:#e0d6cb!important;
+  font:400 .9rem/1.5 Georgia,serif!important;
+  text-decoration:none!important;
+}
+#footer .footer-explore a:hover{color:#f0d49b!important;text-decoration:underline!important}
+#footer .footer-quilt{gap:6px!important;margin:0 0 20px!important}
+#footer .footer-quilt span{width:16px!important;height:16px!important;flex:0 0 16px!important}
+#footer .donation-buttons{gap:10px!important;margin-top:18px!important}
+#footer .donate-btn{
+  min-width:112px!important;
+  padding:10px 17px!important;
+  border:1px solid #c58b68!important;
+  border-radius:3px!important;
+  background:#914638!important;
+  color:#fff8ef!important;
+  font:700 .72rem/1.4 Inter,Arial,sans-serif!important;
+  letter-spacing:.07em!important;
+  text-transform:uppercase!important;
+  text-align:center!important;
+}
+#footer .footer-copy{
+  max-width:1120px!important;
+  margin:32px auto 0!important;
+  padding-top:18px!important;
+  border-top:1px solid rgba(238,230,220,.25)!important;
+  color:#d2c5b8!important;
+  font:400 .76rem/1.6 Georgia,serif!important;
+  letter-spacing:.015em!important;
+  text-align:center!important;
+}
+@media(max-width:760px){
+  #footer > footer.footer,footer.footer{background-size:26px 26px!important;padding:36px 22px 22px!important}
+  #footer .footer-grid{grid-template-columns:1fr!important;gap:25px!important}
+  #footer .footer-grid section{text-align:center!important}
+  #footer .footer-message,#footer .footer-support p{margin-inline:auto!important}
+  #footer .footer-quilt{justify-content:center!important}
+  #footer .footer-explore a{margin:0 auto 10px!important}
+  #footer .donation-buttons{justify-content:center!important}
+  #footer .footer-copy{margin-top:26px!important}
+}
