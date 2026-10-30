@@ -1447,3 +1447,41 @@ footer.footer .footer-checker{display:none!important}
   .book-cover-layout{grid-template-columns:1fr!important;gap:24px!important}
   .book-cover-frame img{width:min(78%,320px)!important}
 }
+
+
+/* Formal editorial refinement for the main site. Footer quilt styling is intentionally untouched. */
+:root{--ink:#342923;--muted:#6d625b;--paper:#f6f1e8;--line:rgba(70,54,45,.18);--accent:#9f493b}
+body{color:var(--ink);background:var(--paper);font-family:Georgia,"Times New Roman",serif;line-height:1.72}
+main{background:var(--paper)}
+.container{width:min(1160px,calc(100% - 56px));margin-inline:auto}
+h1,h2,h3,.section-heading h2,.intro-card h1,.book-cover-copy h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.025em;line-height:1.12;color:#3b2d28}
+p{color:#514740}
+.eyebrow,.card-number{font-family:Inter,Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;font-size:.72rem;font-weight:700;color:#8b5948}
+.hero{padding:34px 0 24px}
+.banner-main{max-width:100%;height:auto}
+.section{padding:clamp(54px,7vw,92px) 0}
+.section-soft{background:#eee5d7;border-block:1px solid var(--line)}
+.intro{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.3fr);gap:clamp(36px,7vw,92px);align-items:center}
+.intro-aside{padding:0 0 0 22px;border-left:2px solid #b88a62}
+.pullquote{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.2;color:#65483d}
+.intro-card{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+.intro-card h1{font-size:clamp(2.5rem,5vw,4.3rem);max-width:760px}
+.intro-card p,.book-cover-copy p{font-size:1.06rem;max-width:720px}
+.section-heading{max-width:760px;margin:0 auto 38px;text-align:center}
+.section-heading h2{font-size:clamp(2.2rem,4vw,3.4rem)}
+.grid{gap:22px}
+.card{background:#fbf8f2!important;border:1px solid var(--line)!important;border-radius:4px!important;box-shadow:0 8px 22px rgba(52,41,35,.055)!important;padding:30px!important}
+.card h3{font-size:1.7rem}
+.button{border-radius:3px!important;letter-spacing:.04em;font-family:Inter,Arial,sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;padding:14px 22px}
+.button-primary{background:#914638!important;border:1px solid #914638!important}
+.button-outline,.button-secondary{background:transparent!important;border:1px solid #8b5948!important;color:#69463b!important}
+.cta{background:#eee5d7!important;border:1px solid var(--line)!important;border-radius:4px!important;box-shadow:none!important;padding:clamp(30px,5vw,58px)!important}
+.cta h2{font-size:clamp(2.3rem,4vw,3.3rem)}
+nav a,.nav a{font-family:Inter,Arial,sans-serif;font-size:.84rem;font-weight:600;letter-spacing:.025em}
+@media(max-width:760px){
+ .container{width:min(100% - 36px,620px)}
+ .intro{grid-template-columns:1fr;gap:26px}
+ .intro-aside{padding-left:16px}
+ .section{padding:48px 0}
+ .card{padding:24px!important}
+}
