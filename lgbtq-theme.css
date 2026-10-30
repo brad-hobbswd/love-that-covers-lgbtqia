@@ -1485,3 +1485,19 @@ nav a,.nav a{font-family:Inter,Arial,sans-serif;font-size:.84rem;font-weight:600
  .section{padding:48px 0}
  .card{padding:24px!important}
 }
+
+
+/* Homepage closing panel: restore clear editorial contrast. Footer remains untouched. */
+main .cta{background:#eee5d7!important;color:#342923!important;border:1px solid rgba(70,54,45,.22)!important;box-shadow:0 10px 28px rgba(52,41,35,.06)!important}
+main .cta .eyebrow{color:#87513f!important;opacity:1!important}
+main .cta h2{color:#342923!important;opacity:1!important}
+main .cta p,main .cta p:not(.eyebrow){color:#514740!important;opacity:1!important}
+main .cta .button-primary{background:#914638!important;color:#fffaf4!important;border-color:#914638!important}
+main .cta .button-secondary{background:transparent!important;color:#69463b!important;border:1px solid #8b5948!important}
+@media(max-width:760px){
+ main .cta{padding:30px 24px!important;gap:24px!important}
+ main .cta h2{font-size:clamp(2.1rem,9vw,2.8rem)!important}
+ main .cta p{font-size:1rem!important;line-height:1.7!important}
+ main .cta .actions{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:12px!important}
+ main .cta .button{width:auto!important;min-width:220px!important;justify-content:center!important}
+}
