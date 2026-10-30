@@ -1180,3 +1180,30 @@ h1,h2,h3{line-height:1.15}
   .reading .card,.prayer-text{padding:26px 22px!important}
   .reading .card p,.prayer-text p{font-size:1rem!important;line-height:1.9!important}
 }
+
+
+/* Full-width quilt checkerboard band at the footer edge */
+.footer{
+  position:relative!important;
+  border-top:0!important;
+  padding-top:58px!important;
+}
+.footer::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:18px;
+  background-color:#d8bd43;
+  background-image:
+    linear-gradient(45deg,#b9473b 25%,transparent 25%,transparent 75%,#b9473b 75%,#b9473b),
+    linear-gradient(45deg,#54819b 25%,transparent 25%,transparent 75%,#54819b 75%,#54819b);
+  background-position:0 0,18px 18px;
+  background-size:36px 36px;
+  background-repeat:repeat-x;
+}
+@media(max-width:760px){
+  .footer{padding-top:48px!important}
+  .footer::before{height:14px;background-size:28px 28px;background-position:0 0,14px 14px}
+}
