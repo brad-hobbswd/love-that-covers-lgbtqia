@@ -1272,3 +1272,40 @@ h1,h2,h3{line-height:1.15}
     margin-bottom:30px!important;
   }
 }
+
+
+/* Book cover feature: remove the enclosing box and let the cover breathe */
+.book-cover-section{
+  width:100%!important;
+  max-width:none!important;
+  margin:clamp(42px,6vw,82px) auto!important;
+  padding:clamp(34px,5vw,64px) 24px!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.book-cover-layout{
+  width:min(1080px,100%)!important;
+  margin:0 auto!important;
+  gap:clamp(42px,8vw,110px)!important;
+}
+.book-cover-copy h2{max-width:540px}
+.book-cover-frame{
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.book-cover-frame img{
+  width:min(100%,330px)!important;
+  border-radius:15px!important;
+  filter:drop-shadow(0 16px 22px rgba(56,45,41,.16))!important;
+}
+.book-cover-frame figcaption{margin-top:18px!important}
+@media(max-width:760px){
+  .book-cover-section{padding:30px 18px!important;margin:34px auto!important}
+  .book-cover-layout{gap:30px!important}
+  .book-cover-frame img{width:min(78%,300px)!important}
+}
