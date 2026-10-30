@@ -1309,3 +1309,26 @@ h1,h2,h3{line-height:1.15}
   .book-cover-layout{gap:30px!important}
   .book-cover-frame img{width:min(78%,300px)!important}
 }
+
+
+/* Book page: remove box-like section treatment and repeated cover caption */
+.book-cover-section,
+.book-cover-section.section-soft{
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+}
+.book-cover-section::before,
+.book-cover-section::after{display:none!important;content:none!important}
+.book-cover-layout{background:transparent!important;border:0!important;box-shadow:none!important}
+.book-cover-frame{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+.book-cover-frame figcaption{display:none!important}
+.book-cover-copy h2{max-width:500px!important}
+.book-cover-copy p:last-child{max-width:430px!important}
+@media(max-width:760px){
+  .book-cover-copy h2{margin-left:auto!important;margin-right:auto!important}
+  .book-cover-copy p:last-child{margin-left:auto!important;margin-right:auto!important}
+}
