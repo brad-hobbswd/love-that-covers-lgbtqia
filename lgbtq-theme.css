@@ -680,3 +680,31 @@ body{
   .prayer-text p{font-size:1.02rem;line-height:1.9}
   .prayer-navigation{padding-bottom:38px}
 }
+
+/* Banner artwork: display cleanly without a frame, border, or card treatment */
+.hero-banner-wrap{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  overflow:visible!important;
+  max-height:none!important;
+}
+.banner-main{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:350px;
+  object-fit:contain;
+  object-position:center;
+  margin:0 auto;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+@media(max-width:700px){
+  .hero-banner-wrap{width:calc(100% - 28px);margin:18px auto 0}
+  .banner-main{max-height:205px}
+}
