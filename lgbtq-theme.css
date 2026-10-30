@@ -1207,3 +1207,23 @@ h1,h2,h3{line-height:1.15}
   .footer{padding-top:48px!important}
   .footer::before{height:14px;background-size:28px 28px;background-position:0 0,14px 14px}
 }
+
+
+/* Use a real footer element for the quilt band so it cannot be lost to pseudo-element rules */
+#footer .footer{position:relative!important;overflow:hidden!important;border-top:0!important;padding-top:0!important}
+#footer .footer-checker{
+  display:block!important;
+  width:calc(100% + 48px)!important;
+  height:24px!important;
+  margin:0 -24px 42px!important;
+  background-color:#d7bd63!important;
+  background-image:
+    conic-gradient(#a84d3e 25%,#d7bd63 0 50%,#a84d3e 0 75%,#d7bd63 0)!important;
+  background-size:48px 48px!important;
+  background-position:0 0!important;
+  border-bottom:1px solid rgba(255,255,255,.25)!important;
+}
+#footer .footer .footer-quilt{margin-top:0!important}
+@media(max-width:760px){
+  #footer .footer-checker{height:20px!important;margin:0 -18px 32px!important;background-size:40px 40px!important}
+}
