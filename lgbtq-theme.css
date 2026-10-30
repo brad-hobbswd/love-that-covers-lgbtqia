@@ -1501,3 +1501,61 @@ main .cta .button-secondary{background:transparent!important;color:#69463b!impor
  main .cta .actions{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:12px!important}
  main .cta .button{width:auto!important;min-width:220px!important;justify-content:center!important}
 }
+
+
+/* Ensure the paperback feature is visibly rendered on every viewport. */
+main .book-cover-section{
+  display:block!important;
+  min-height:420px;
+  visibility:visible!important;
+  opacity:1!important;
+  overflow:visible!important;
+}
+main .book-cover-section .book-cover-layout{
+  display:grid!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+main .book-cover-section .book-cover-copy{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  color:#342923!important;
+}
+main .book-cover-section .book-cover-copy .eyebrow{
+  display:block!important;
+  color:#87513f!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+main .book-cover-section .book-cover-copy h2{
+  display:block!important;
+  color:#342923!important;
+  opacity:1!important;
+  visibility:visible!important;
+  margin:0 0 16px!important;
+}
+main .book-cover-section .book-cover-copy p:not(.eyebrow){
+  display:block!important;
+  color:#514740!important;
+  opacity:1!important;
+  visibility:visible!important;
+  margin:0!important;
+  line-height:1.8!important;
+}
+main .book-cover-section .book-cover-frame,
+main .book-cover-section .book-cover-frame img{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+main .book-cover-section .book-cover-frame img{
+  width:min(100%,380px)!important;
+  height:auto!important;
+  margin:0 auto!important;
+}
+@media(max-width:760px){
+  main .book-cover-section{min-height:0!important;padding:38px 20px 46px!important}
+  main .book-cover-section .book-cover-layout{grid-template-columns:1fr!important;text-align:center!important}
+  main .book-cover-section .book-cover-copy{margin:0 auto!important}
+}
