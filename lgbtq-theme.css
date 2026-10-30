@@ -1070,3 +1070,113 @@ h1,h2,h3{line-height:1.15}
   .intro-card{padding:26px 22px!important}
   .cta{border-radius:6px!important}
 }
+
+
+/* Interior pages: one consistent, publication-quality reading system */
+:where(.about-page,.stories-page,.resources-page,.contact-page,.store-page,.reading,.prayer-space){
+  color:var(--ink);
+}
+.about-shell,.stories-shell,.resources-shell,.contact-shell,.store-shell,.shell{
+  width:min(1040px,calc(100% - 44px))!important;
+}
+.about-page,.stories-page,.resources-page,.contact-page,.store-page,.reading{
+  padding-top:clamp(48px,6vw,76px)!important;
+  padding-bottom:clamp(48px,6vw,76px)!important;
+}
+.about-card,.contact-panel,.resource-section,.store-card,.stories-note,.reading .card,.prayer-text{
+  background:var(--surface)!important;
+  border:1px solid var(--line)!important;
+  border-radius:7px!important;
+  box-shadow:0 5px 18px rgba(51,41,35,.045)!important;
+}
+.about-card:before,.story-card:before{height:3px!important;border-radius:0!important}
+.about-card h1,.stories-intro h1,.contact-intro h1,.heading h1,.resource-intro h1{
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  font-weight:600!important;
+  color:var(--accent-dark)!important;
+  letter-spacing:-.015em;
+  line-height:1.05!important;
+}
+.about-lead,.about-closing p,.contact-closing,.store-note{
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  color:var(--accent-dark)!important;
+  font-size:1.35rem!important;
+  line-height:1.55!important;
+}
+.about-card p,.contact-panel p,.resource-section p,.store-copy p{
+  font-size:.96rem!important;
+  line-height:1.9!important;
+}
+.story-grid{gap:18px!important}
+.story-card,.story-card:visited{
+  border-radius:7px!important;
+  border:1px solid var(--line)!important;
+  box-shadow:none!important;
+  padding:clamp(23px,3vw,34px)!important;
+  transition:border-color .2s ease,background .2s ease!important;
+}
+.story-card:hover{transform:none!important;border-color:var(--accent)!important;background:#fffdf9!important}
+.story-card h2,.story-card:visited h2{
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  font-size:1.8rem!important;
+  font-weight:600!important;
+}
+.story-number,.about-kicker,.store-copy .kicker{
+  font-size:.68rem!important;
+  letter-spacing:.15em!important;
+}
+.stories-note{padding:26px!important}
+.resource-intro h2,.resource-section h2,.contact-intro h2,.contact-panel h2,.store-copy h2{
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  font-weight:600!important;
+  line-height:1.1!important;
+}
+.resource-section{padding:clamp(24px,3.5vw,38px)!important;margin-bottom:20px!important}
+.resource-list{gap:12px!important}
+.resource-item{
+  border-radius:5px!important;
+  background:#f7f2e9!important;
+  border-color:var(--line)!important;
+  padding:19px!important;
+  box-shadow:none!important;
+}
+.resource-item:hover{transform:none!important;background:#fffdf8!important;border-color:var(--accent)!important}
+.resource-item strong{font-family:"Cormorant Garamond",Georgia,serif!important;font-size:1.22rem!important}
+.contact-options{gap:12px!important}
+.contact-option{border-radius:5px!important;background:#f7f2e9!important;padding:20px!important}
+.contact-option strong{font-family:"Cormorant Garamond",Georgia,serif!important;font-size:1.25rem!important}
+.store-card{gap:clamp(28px,5vw,54px)!important;padding:clamp(25px,4vw,46px)!important}
+.cover-wrap img{box-shadow:0 12px 24px rgba(51,41,35,.14)!important;border-radius:4px!important}
+.coming-soon{border-radius:4px!important;letter-spacing:.08em!important;text-transform:uppercase}
+.heading{margin-bottom:28px!important}
+.heading small{font-size:.68rem!important;letter-spacing:.16em!important}
+.heading h1{font-size:clamp(2.8rem,5vw,4.2rem)!important}
+.reading .card{padding:clamp(28px,5vw,58px)!important}
+.reading .card p{
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:1.08rem!important;
+  line-height:2!important;
+  color:#40362f!important;
+  margin-bottom:24px!important;
+}
+.reading .card p:first-child::first-letter{color:var(--accent)!important}
+.reading .nav a,.chapter-nav a,.nav a{
+  border-radius:4px!important;
+  font-size:.76rem!important;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.prayer-hero{padding:clamp(45px,7vw,76px) 20px 24px!important;text-align:center}
+.prayer-hero h1{font:600 clamp(2.8rem,5vw,4.2rem)/1.05 "Cormorant Garamond",Georgia,serif!important;color:var(--accent-dark)!important}
+.prayer-divider{width:56px!important;height:2px!important;background:var(--gold)!important;margin:22px auto!important}
+.prayer-space{padding:18px 20px clamp(50px,7vw,80px)!important}
+.prayer-text{max-width:850px!important;margin:0 auto!important;padding:clamp(28px,5vw,58px)!important}
+.prayer-text p{font-family:Georgia,"Times New Roman",serif!important;font-size:1.08rem!important;line-height:2!important}
+@media(max-width:700px){
+  .about-shell,.stories-shell,.resources-shell,.contact-shell,.store-shell,.shell{width:calc(100% - 28px)!important}
+  .story-grid,.resource-list,.contact-options{grid-template-columns:1fr!important}
+  .resource-item.bapbi{grid-column:auto!important}
+  .store-card{grid-template-columns:1fr!important}
+  .reading .card,.prayer-text{padding:26px 22px!important}
+  .reading .card p,.prayer-text p{font-size:1rem!important;line-height:1.9!important}
+}
