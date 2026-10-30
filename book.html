@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Book | Love That Covers LGBTQIA+ Edition</title>
 <meta name="description" content="Explore Love That Covers LGBTQIA+ Edition, a story of healing, identity, belonging, grace, and love by Bradley Hobbs.">
-<link rel="stylesheet" href="lgbtq-theme.css">
+<link rel="stylesheet" href="lgbtq-theme.css?v=book-feature-2">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -30,18 +30,26 @@
   </div>
 </section>
 
-<section class="section book-cover-section">
-  <div class="container book-cover-layout">
-    <div class="book-cover-copy">
-      <p class="eyebrow">Paperback edition</p>
-      <h2>The book, in print.</h2>
-      <p>A look at the published edition before you explore its opening pages.</p>
+<section class="book-cover-section" aria-labelledby="paperback-heading" style="display:block!important;visibility:visible!important;opacity:1!important;width:100%;padding:64px 24px 76px;background:#f6f1e8;">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,390px);align-items:center;gap:64px;width:min(1080px,100%);margin:0 auto;">
+    <div style="display:block!important;visibility:visible!important;opacity:1!important;text-align:left;">
+      <p style="display:block!important;margin:0 0 14px;color:#87513f;font:700 .75rem Inter,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;">Paperback edition</p>
+      <h2 id="paperback-heading" style="display:block!important;margin:0 0 18px;color:#342923;font:600 clamp(2.5rem,5vw,3.6rem)/1.1 'Cormorant Garamond',Georgia,serif;">The book, in print.</h2>
+      <p style="display:block!important;max-width:460px;margin:0;color:#514740;font:400 1.05rem/1.85 Georgia,serif;">A look at the published edition before you explore its opening pages.</p>
     </div>
-    <figure class="book-cover-frame">
-      <img src="C61C2DB3-86AD-4EA9-A7C0-138A3BE9BBAC.png" alt="Love That Covers LGBTQIA+ Edition book cover">
+    <figure style="display:block!important;visibility:visible!important;opacity:1!important;margin:0;text-align:center;">
+      <img src="C61C2DB3-86AD-4EA9-A7C0-138A3BE9BBAC.png" alt="Love That Covers LGBTQIA+ Edition book cover" style="display:block!important;visibility:visible!important;opacity:1!important;width:min(100%,360px);height:auto;margin:0 auto;border-radius:9px;filter:drop-shadow(0 14px 20px rgba(56,45,41,.18));">
     </figure>
   </div>
 </section>
+<style>
+@media(max-width:760px){
+ .book-cover-section>div{grid-template-columns:1fr!important;gap:28px!important;text-align:center!important}
+ .book-cover-section>div>div{text-align:center!important}
+ .book-cover-section>div>div>p:last-child{margin-inline:auto!important}
+ .book-cover-section figure img{width:min(78%,320px)!important}
+}
+</style>
 
 <section class="section book-pages-section">
   <div class="container">
