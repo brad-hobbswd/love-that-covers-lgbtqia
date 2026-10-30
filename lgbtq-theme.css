@@ -1751,3 +1751,80 @@ footer.footer .footer-checker,
     padding:36px 22px 22px!important;
   }
 }
+
+
+/* Navigation correction: full horizontal navigation on desktop, compact menu on mobile */
+@media(min-width:901px){
+  #site-header .navbar{
+    width:min(1200px,calc(100% - 64px))!important;
+    min-height:82px!important;
+    margin:0 auto!important;
+    padding:12px 0!important;
+    justify-content:space-between!important;
+    gap:30px!important;
+  }
+  #site-header .brand-mark{
+    flex:0 0 auto!important;
+    min-width:max-content!important;
+    margin:0!important;
+    text-align:left!important;
+    align-items:flex-start!important;
+    font-size:1.38rem!important;
+  }
+  #site-header .brand-mark small{text-align:left!important}
+  #site-header .nav-menu{
+    display:block!important;
+    flex:0 1 auto!important;
+    margin-left:auto!important;
+  }
+  #site-header .nav-menu>summary{display:none!important}
+  #site-header .nav-menu>.nav-links{
+    display:flex!important;
+    position:static!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    flex-wrap:nowrap!important;
+    gap:4px!important;
+    width:auto!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+  }
+  #site-header .nav-menu>.nav-links a{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    min-height:38px!important;
+    padding:8px 10px!important;
+    white-space:nowrap!important;
+    border:1px solid transparent!important;
+    border-radius:3px!important;
+    font-size:.68rem!important;
+    letter-spacing:.045em!important;
+  }
+}
+@media(max-width:900px){
+  #site-header .navbar{
+    width:calc(100% - 36px)!important;
+    margin:0 auto!important;
+    justify-content:space-between!important;
+  }
+  #site-header .brand-mark{
+    flex:1 1 auto!important;
+    margin:0!important;
+    text-align:left!important;
+    align-items:flex-start!important;
+  }
+  #site-header .brand-mark small{text-align:left!important}
+  #site-header .nav-menu{margin-left:auto!important}
+  #site-header .nav-menu>summary{
+    border-radius:4px!important;
+    box-shadow:none!important;
+    background:#eee4d6!important;
+  }
+}
+@media(max-width:420px){
+  #site-header .navbar{width:calc(100% - 26px)!important}
+}
