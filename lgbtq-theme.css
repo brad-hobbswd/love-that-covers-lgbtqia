@@ -1245,3 +1245,30 @@ h1,h2,h3{line-height:1.15}
 @media(max-width:760px){
   #footer .footer{background-size:48px 48px!important}
 }
+
+
+/* Reference-matched quilt trim: patterned band above a solid dark footer */
+#footer .footer{
+  background:#342923!important;
+  background-image:none!important;
+  border:0!important;
+  padding-top:0!important;
+  overflow:hidden!important;
+}
+#footer .footer-checker{
+  display:grid!important;
+  height:22px!important;
+  width:100vw!important;
+  margin:0 0 38px!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+  grid-template-columns:repeat(48,minmax(0,1fr))!important;
+  grid-template-rows:repeat(2,11px)!important;
+}
+@media(max-width:760px){
+  #footer .footer-checker{
+    height:18px!important;
+    grid-template-rows:repeat(2,9px)!important;
+    margin-bottom:30px!important;
+  }
+}
