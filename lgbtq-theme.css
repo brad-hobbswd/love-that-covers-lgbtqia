@@ -50,3 +50,28 @@ html,body{margin:0!important;padding-top:0!important}
 .closing-message{padding:48px 22px 54px;text-align:center;background:linear-gradient(135deg,#eadbc8,#f7efe3);border-block:1px solid var(--line)}
 .closing-message p{max-width:760px;margin:0 auto 22px;font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.4;color:var(--accent-dark)}
 @media(max-width:700px){.hero{padding-bottom:34px}.hero-copy{width:calc(100% - 36px);margin:22px auto 0}.hero-copy .edition-label{font-size:.68rem;letter-spacing:.11em;line-height:1.6}.hero-copy h1{font-size:clamp(2rem,9vw,2.7rem);margin-bottom:12px}.hero-copy .hero-text{font-size:1rem;line-height:1.75;margin-bottom:20px}.cards-wrapper{padding:34px 14px}.cards-container{grid-template-columns:1fr;gap:15px}.cards-container .card{padding:23px 20px;border-radius:18px}.cards-container .card h2{font-size:1.4rem}.closing-message{padding:36px 18px 40px}}
+
+/* Footer layout repair: center and constrain every footer element */
+.footer{box-sizing:border-box;width:100%;padding:48px 22px 30px!important;text-align:center!important;display:flex;flex-direction:column;align-items:center;gap:0;color:#f8eee2}
+.footer>*{box-sizing:border-box;max-width:760px;width:100%;margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+.footer .footer-quilt{width:auto;max-width:none;display:flex;justify-content:center;align-items:center;gap:7px;margin:0 auto 26px!important;padding:0 0 8px}
+.footer .footer-quilt span{display:block;width:30px;height:30px;flex:0 0 30px}
+.footer .footer-name{font-family:"Playfair Display",Georgia,serif;font-size:1.65rem;font-weight:700;line-height:1.25;color:#fff!important;margin:0 auto 8px!important}
+.footer .footer-book{font-size:1rem;font-weight:650;color:#e7c9a6;margin:0 auto 10px!important}
+.footer .footer-message{font-size:.98rem;line-height:1.75;color:#f1e4d7;margin:0 auto 24px!important}
+.footer .footer-divider{width:min(100%,760px);height:1px;border:0;background:#ffffff55;margin:18px auto!important}
+.footer .support-title{font-family:"Playfair Display",Georgia,serif;font-size:1.45rem;line-height:1.3;color:#e5bd79;margin:0 auto 10px!important}
+.footer .support-title+p{font-size:.96rem;line-height:1.75;color:#f1e4d7;margin:0 auto 20px!important}
+.footer .donation-buttons{width:100%;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;margin:0 auto 8px!important}
+.footer .donation-buttons .donate-btn{width:auto;min-width:132px;margin:0!important;padding:12px 22px}
+.footer .footer-copy{font-size:.85rem;line-height:1.6;color:#d7c5b8;margin:12px auto 0!important}
+@media(max-width:700px){
+ .footer{padding:38px 18px 26px!important;gap:0}
+ .footer>*{max-width:100%}
+ .footer .footer-quilt{gap:5px;margin-bottom:22px!important}
+ .footer .footer-quilt span{width:25px;height:25px;flex-basis:25px}
+ .footer .footer-name{font-size:1.5rem}
+ .footer .footer-message,.footer .support-title+p{font-size:.92rem}
+ .footer .donation-buttons{gap:10px}
+ .footer .donation-buttons .donate-btn{min-width:125px}
+}
