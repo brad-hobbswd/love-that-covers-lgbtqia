@@ -803,3 +803,26 @@ body{font-family:Inter,Arial,sans-serif;background:var(--paper-light);color:var(
  .footer-copy{margin-top:28px!important}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Shared editorial refinements for interior pages */
+.hero{background:var(--paper-light)!important}
+h1,h2,h3,.book-hero h1,.about-card h1,.story-card h2,.contact-panel h2,.store-copy h2,.prayer-hero h1{font-family:var(--serif)!important}
+.book-hero{background:linear-gradient(135deg,#542235,#7a3048)!important;color:#fff}
+.book-hero .edition-label,.book-hero h1,.book-hero .hero-text{color:#fff!important}
+.book-hero .hero-text{opacity:.9}
+.about-page,.stories-page,.contact-page,.store-page,.book-content{background:var(--paper-light)}
+.about-card,.book-card-full,.chapter-card,.contact-panel,.store-card,.stories-note,.prayer-text{border:0!important;border-radius:22px!important;box-shadow:var(--shadow)!important}
+.story-card,.story-card:visited{border:1px solid var(--line)!important;border-radius:18px!important;box-shadow:0 8px 25px rgba(67,24,39,.06)!important}
+.story-card:before{height:4px;border-radius:0}
+.story-card:hover{border-color:#d6b77a!important;box-shadow:var(--shadow)!important}
+.chapter-heading h1,.heading h1{font-family:var(--serif)!important}
+.chapter-nav a,.nav a{border-radius:999px!important;border-color:var(--line)!important;background:var(--surface)!important;color:var(--accent-dark)!important}
+.prayer-hero{background:linear-gradient(135deg,#542235,#7a3048)!important}
+.prayer-hero h1{color:#fff!important}
+.prayer-space{background:var(--paper-light)!important}
+.prayer-text{background:var(--surface)!important}
+@media(max-width:640px){
+ .book-hero{padding:58px 20px!important}
+ .about-card,.book-card-full,.contact-panel,.store-card,.prayer-text{border-radius:18px!important}
+}
