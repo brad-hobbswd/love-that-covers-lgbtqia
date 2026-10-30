@@ -1418,3 +1418,32 @@ footer.footer .footer-checker{display:none!important}
   #footer > footer.footer,
   footer.footer{background-size:40px 40px!important}
 }
+
+
+/* Tighten the book page transition and restore visual balance */
+.book-cover-section{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:46px 24px 54px!important;
+  background:transparent!important;
+}
+.book-cover-layout{
+  width:min(1080px,100%)!important;
+  margin:0 auto!important;
+  grid-template-columns:minmax(0,1fr) minmax(300px,420px)!important;
+  gap:clamp(40px,7vw,100px)!important;
+  align-items:center!important;
+}
+.book-cover-copy{max-width:560px!important}
+.book-cover-copy h2{font-size:clamp(2.5rem,4.8vw,3.6rem)!important}
+.book-cover-frame img{
+  width:min(100%,400px)!important;
+  border-radius:8px!important;
+  filter:drop-shadow(0 14px 20px rgba(56,45,41,.18))!important;
+}
+@media(max-width:760px){
+  .book-cover-section{padding:34px 20px 42px!important}
+  .book-cover-layout{grid-template-columns:1fr!important;gap:24px!important}
+  .book-cover-frame img{width:min(78%,320px)!important}
+}
