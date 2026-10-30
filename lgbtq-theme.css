@@ -1379,3 +1379,20 @@ h1,h2,h3{line-height:1.15}
   }
   #footer .footer .footer-quilt{margin-bottom:24px!important}
 }
+
+
+/* Actual checkerboard background across the complete footer */
+footer.footer{
+  background-color:#392d29!important;
+  background-image:repeating-conic-gradient(
+    #493a33 0% 25%,
+    #392d29 0% 50%
+  )!important;
+  background-size:56px 56px!important;
+  background-position:0 0!important;
+  background-repeat:repeat!important;
+}
+footer.footer .footer-checker{display:none!important}
+@media(max-width:760px){
+  footer.footer{background-size:42px 42px!important}
+}
