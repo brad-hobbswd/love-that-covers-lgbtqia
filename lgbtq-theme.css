@@ -1396,3 +1396,25 @@ footer.footer .footer-checker{display:none!important}
 @media(max-width:760px){
   footer.footer{background-size:42px 42px!important}
 }
+
+
+/* True two-by-two checkerboard tiles across the full footer surface */
+#footer > footer.footer,
+footer.footer{
+  background-color:#392d29!important;
+  background-image:conic-gradient(
+    #554139 25%,
+    #392d29 0 50%,
+    #554139 0 75%,
+    #392d29 0
+  )!important;
+  background-size:52px 52px!important;
+  background-position:0 0!important;
+  background-repeat:repeat!important;
+}
+#footer > footer.footer .footer-checker,
+footer.footer .footer-checker{display:none!important}
+@media(max-width:760px){
+  #footer > footer.footer,
+  footer.footer{background-size:40px 40px!important}
+}
