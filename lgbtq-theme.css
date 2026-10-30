@@ -1332,3 +1332,50 @@ h1,h2,h3{line-height:1.15}
   .book-cover-copy h2{margin-left:auto!important;margin-right:auto!important}
   .book-cover-copy p:last-child{margin-left:auto!important;margin-right:auto!important}
 }
+
+
+/* Final footer trim: one clean band, no stacked or doubled patterns */
+#footer .footer{
+  background:#342923!important;
+  background-image:none!important;
+  border-top:0!important;
+  padding-top:26px!important;
+  overflow:hidden!important;
+}
+#footer .footer::before,
+#footer .footer::after{content:none!important;display:none!important}
+#footer .footer-checker{
+  display:block!important;
+  position:relative!important;
+  left:auto!important;
+  transform:none!important;
+  width:calc(100% + 48px)!important;
+  height:22px!important;
+  margin:0 -24px 42px!important;
+  padding:0!important;
+  border:0!important;
+  background-color:#e2c64f!important;
+  background-image:
+    linear-gradient(135deg,transparent 0 49%,#b64f40 50% 100%),
+    linear-gradient(45deg,#b64f40 0 49%,transparent 50% 100%),
+    linear-gradient(90deg,transparent 0 91%,#d6a04d 91% 92%,#e1c65a 92% 93%,#718f58 93% 94%,#648ba2 94% 95%,#55527c 95% 96%,#98618b 96% 97%,#ead9bf 97% 98%,#b64f40 98% 99%,#d6a04d 99% 100%);
+  background-size:24px 22px,24px 22px,100% 100%;
+  background-position:0 0,12px 0,0 0;
+  background-repeat:repeat-x,repeat-x,no-repeat;
+}
+#footer .footer .footer-quilt{
+  margin:0 auto 28px!important;
+  position:relative!important;
+  z-index:1!important;
+}
+@media(max-width:760px){
+  #footer .footer{padding-top:20px!important}
+  #footer .footer-checker{
+    height:18px!important;
+    width:calc(100% + 36px)!important;
+    margin:0 -18px 34px!important;
+    background-size:20px 18px,20px 18px,100% 100%!important;
+    background-position:0 0,10px 0,0 0!important;
+  }
+  #footer .footer .footer-quilt{margin-bottom:24px!important}
+}
