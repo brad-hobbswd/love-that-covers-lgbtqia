@@ -1227,3 +1227,21 @@ h1,h2,h3{line-height:1.15}
 @media(max-width:760px){
   #footer .footer-checker{height:20px!important;margin:0 -18px 32px!important;background-size:40px 40px!important}
 }
+
+
+/* Make the entire footer a visible quilt-checker background */
+#footer .footer{
+  background-color:#392d29!important;
+  background-image:
+    repeating-conic-gradient(
+      from 0deg at 0 0,
+      #49372f 0deg 90deg,
+      #392d29 90deg 180deg
+    )!important;
+  background-size:64px 64px!important;
+  background-position:0 0!important;
+}
+#footer .footer-checker{display:none!important}
+@media(max-width:760px){
+  #footer .footer{background-size:48px 48px!important}
+}
