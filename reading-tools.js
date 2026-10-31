@@ -6,7 +6,7 @@
     const toolbar=document.createElement('section');
     toolbar.className='reading-listen-tools';
     toolbar.setAttribute('aria-label','Reading and listening options');
-    toolbar.innerHTML='<div class="reading-tools-copy"><strong>Listen to this reading</strong><span>Listen while you go about your day. You can also select a passage and use your device’s own read-aloud feature.</span></div><div class="reading-tools-actions"><button type="button" class="listen-play">▶ Listen</button><button type="button" class="listen-pause" disabled>Ⅱ Pause</button><button type="button" class="listen-stop" disabled>■ Stop</button></div><p class="reading-listen-status" role="status" aria-live="polite"></p>';
+    toolbar.innerHTML='<div class="reading-tools-copy"><strong>Listen to this reading</strong><span>On iPhone or iPad, open Safari’s page menu and choose “Listen to Page.” Choose “Show Reader” for a cleaner reading view. You can also select text and use Speak Selection in Accessibility settings. Other browsers may offer their own read-aloud options.</span></div><div class="reading-tools-actions"><button type="button" class="listen-play">▶ Listen</button><button type="button" class="listen-pause" disabled>Ⅱ Pause</button><button type="button" class="listen-stop" disabled>■ Stop</button></div><p class="reading-listen-status" role="status" aria-live="polite"></p>';
     article.parentNode.insertBefore(toolbar,article);
     const play=toolbar.querySelector('.listen-play');
     const pause=toolbar.querySelector('.listen-pause');
