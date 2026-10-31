@@ -2107,3 +2107,17 @@ footer.footer .footer-checker,
  .reading-tools-actions{width:100%}
  .reading-tools-actions button{flex:1;min-width:0;padding:10px 8px}
 }
+
+
+/* Desktop voice picker for the in-page reading player */
+.listen-voice-label{
+  display:flex;align-items:center;gap:7px;
+  color:var(--accent-dark);font:600 .82rem Inter,Arial,sans-serif;
+}
+.listen-voice{
+  max-width:230px;min-height:40px;padding:8px 30px 8px 11px;
+  border:1px solid var(--line);border-radius:8px;
+  background:#fffaf3;color:#493a33;font:500 .82rem Inter,Arial,sans-serif;
+}
+.listen-voice:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:760px){.listen-voice-label{display:none!important}}
