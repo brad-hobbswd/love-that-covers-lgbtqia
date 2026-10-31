@@ -6,7 +6,7 @@
     const toolbar=document.createElement('section');
     toolbar.className='reading-listen-tools';
     toolbar.setAttribute('aria-label','Reading and listening options');
-    toolbar.innerHTML='<div class="reading-tools-copy"><strong>Listen to this reading</strong><span>Listen while you go about your day, or select a passage and use your device’s own read-aloud feature where available.</span></div><div class="reading-tools-actions"><button type="button" class="listen-play">▶ Listen</button><button type="button" class="listen-pause" disabled>Ⅱ Pause</button><button type="button" class="listen-stop" disabled>■ Stop</button></div><p class="reading-listen-status" role="status" aria-live="polite"></p>';
+    toolbar.innerHTML='<div class="reading-tools-copy"><strong>Listen to this reading</strong><span>Listen while you go about your day. You can also select a passage and use your device’s own read-aloud feature.</span></div><div class="reading-tools-actions"><button type="button" class="listen-play">▶ Listen</button><button type="button" class="listen-pause" disabled>Ⅱ Pause</button><button type="button" class="listen-stop" disabled>■ Stop</button></div><p class="reading-listen-status" role="status" aria-live="polite"></p>';
     article.parentNode.insertBefore(toolbar,article);
     const play=toolbar.querySelector('.listen-play');
     const pause=toolbar.querySelector('.listen-pause');
@@ -14,61 +14,79 @@
     const status=toolbar.querySelector('.reading-listen-status');
     if(!supported){
       play.disabled=true;pause.disabled=true;stop.disabled=true;
-      status.textContent='Read-aloud is not supported by this browser. You can still use your device’s accessibility or screen-reading tools.';
+      status.textContent='This browser does not support the built-in listen button. Use your device’s accessibility read-aloud settings instead.';
       return;
     }
-    let chunks=[],index=0,active=false;
-    function setStatus(message){status.textContent=message;}
-    function setButtons(state){
+    const synth=window.speechSynthesis;
+    let utterances=[],finished=0,stopped=false,paused=false;
+    function announce(message){status.textContent=message;}
+    function controls(state){
       play.disabled=state==='playing'||state==='paused';
-      pause.disabled=state!=='playing';
+      pause.disabled=state==='idle';
       pause.textContent=state==='paused'?'▶ Resume':'Ⅱ Pause';
-      if(state==='paused') pause.disabled=false;
       stop.disabled=state==='idle';
     }
-    function makeChunks(text){
-      const sentences=text.replace(/\s+/g,' ').trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[text];
-      const result=[];let part='';
+    function splitForSpeech(value){
+      const clean=value.replace(/\s+/g,' ').trim();
+      const sentences=clean.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[clean];
+      const pieces=[];let current='';
       sentences.forEach(sentence=>{
-        const next=(part+' '+sentence).trim();
-        if(next.length>220 && part){result.push(part);part=sentence.trim();}
-        else part=next;
+        let part=sentence.trim();
+        while(part.length>650){
+          const cut=part.lastIndexOf(' ',650);
+          const point=cut>250?cut:650;
+          pieces.push(part.slice(0,point).trim());
+          part=part.slice(point).trim();
+        }
+        if(!part)return;
+        if((current+' '+part).trim().length>650&&current){pieces.push(current);current=part;}
+        else current=(current+' '+part).trim();
       });
-      if(part) result.push(part);
-      return result;
+      if(current)pieces.push(current);
+      return pieces.filter(Boolean);
     }
-    function speakNext(){
-      if(!active||index>=chunks.length){
-        active=false;setButtons('idle');setStatus('Reading finished. You can listen again whenever you are ready.');return;
-      }
-      const utterance=new SpeechSynthesisUtterance(chunks[index]);
-      utterance.onend=function(){index++;speakNext();};
-      utterance.onerror=function(event){
-        if(event.error==='canceled'||event.error==='interrupted') return;
-        active=false;setButtons('idle');setStatus('The device could not continue reading. Please try again.');
-      };
-      window.speechSynthesis.speak(utterance);
+    function startReading(){
+      const text=article.innerText||article.textContent||'';
+      utterances=splitForSpeech(text).map(part=>new SpeechSynthesisUtterance(part));
+      if(!utterances.length){announce('There is no reading text available on this page.');return;}
+      finished=0;stopped=false;paused=false;
+      utterances.forEach((utterance)=>{
+        utterance.rate=0.95;
+        utterance.onend=function(){
+          if(stopped)return;
+          finished++;
+          if(finished>=utterances.length){
+            controls('idle');announce('Reading finished. You can listen again whenever you are ready.');
+          }
+        };
+        utterance.onerror=function(event){
+          if(stopped||event.error==='canceled'||event.error==='interrupted')return;
+          stopped=true;synth.cancel();controls('idle');
+          announce('Your iPhone stopped the reading. Tap Listen to start again.');
+        };
+      });
+      controls('playing');
+      announce('Reading aloud. You can pause or stop at any time.');
+      // iOS Safari is more reliable when every short passage is queued
+      // directly during the original tap, rather than chained after onend.
+      synth.cancel();
+      synth.resume();
+      utterances.forEach(utterance=>synth.speak(utterance));
     }
     play.addEventListener('click',function(){
-      if(window.speechSynthesis.paused){
-        window.speechSynthesis.resume();active=true;setButtons('playing');setStatus('Resuming your reading.');return;
-      }
-      window.speechSynthesis.cancel();
-      const text=article.innerText||article.textContent||'';
-      chunks=makeChunks(text);index=0;active=true;
-      setButtons('playing');setStatus('Reading aloud. You can pause or stop at any time.');
-      speakNext();
+      if(paused){synth.resume();paused=false;controls('playing');announce('Resuming your reading.');return;}
+      startReading();
     });
     pause.addEventListener('click',function(){
-      if(window.speechSynthesis.paused){window.speechSynthesis.resume();setButtons('playing');setStatus('Resuming your reading.');}
-      else if(window.speechSynthesis.speaking){window.speechSynthesis.pause();setButtons('paused');setStatus('Reading paused.');}
+      if(paused){synth.resume();paused=false;controls('playing');announce('Resuming your reading.');}
+      else if(synth.speaking){synth.pause();paused=true;controls('paused');announce('Reading paused.');}
     });
     stop.addEventListener('click',function(){
-      active=false;window.speechSynthesis.cancel();index=0;setButtons('idle');setStatus('Reading stopped.');
+      stopped=true;paused=false;synth.cancel();utterances=[];controls('idle');announce('Reading stopped.');
     });
-    window.addEventListener('pagehide',function(){window.speechSynthesis.cancel();});
-    setButtons('idle');
+    window.addEventListener('pagehide',function(){stopped=true;synth.cancel();});
+    controls('idle');
   }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initReadingTools);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initReadingTools);
   else initReadingTools();
 })();
