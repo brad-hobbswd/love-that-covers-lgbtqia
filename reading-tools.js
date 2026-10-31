@@ -6,18 +6,46 @@
     const toolbar=document.createElement('section');
     toolbar.className='reading-listen-tools';
     toolbar.setAttribute('aria-label','Reading and listening options');
-    toolbar.innerHTML='<div class="reading-tools-copy"><strong>Listen to this reading</strong><span>On iPhone or iPad, open Safari’s page menu and choose “Listen to Page.” Choose “Show Reader” for a cleaner reading view. You can also select text and use Speak Selection in Accessibility settings. Other browsers may offer their own read-aloud options.</span></div><div class="reading-tools-actions"><button type="button" class="listen-play">▶ Listen</button><button type="button" class="listen-pause" disabled>Ⅱ Pause</button><button type="button" class="listen-stop" disabled>■ Stop</button></div><p class="reading-listen-status" role="status" aria-live="polite"></p>';
+    toolbar.innerHTML='<div class="reading-tools-copy"><strong>Listen to this reading</strong><span>On desktop, choose a voice available in your browser or computer, then select Listen. More natural voices may be available in your system voice settings.</span></div><div class="reading-tools-actions"><label class="listen-voice-label">Voice <select class="listen-voice" aria-label="Choose a reading voice"><option value="">Loading voices…</option></select></label><button type="button" class="listen-play">▶ Listen</button><button type="button" class="listen-pause" disabled>Ⅱ Pause</button><button type="button" class="listen-stop" disabled>■ Stop</button></div><p class="reading-listen-status" role="status" aria-live="polite"></p>';
     article.parentNode.insertBefore(toolbar,article);
     const play=toolbar.querySelector('.listen-play');
     const pause=toolbar.querySelector('.listen-pause');
     const stop=toolbar.querySelector('.listen-stop');
     const status=toolbar.querySelector('.reading-listen-status');
+    const voiceSelect=toolbar.querySelector('.listen-voice');
     if(!supported){
       play.disabled=true;pause.disabled=true;stop.disabled=true;
       status.textContent='This browser does not support the built-in listen button. Use your device’s accessibility read-aloud settings instead.';
       return;
     }
     const synth=window.speechSynthesis;
+    let availableVoices=[],selectedVoice=null;
+    function loadVoices(){
+      const all=synth.getVoices();
+      if(!all.length)return;
+      availableVoices=all.filter(voice=>/^en([_-]|$)/i.test(voice.lang));
+      if(!availableVoices.length)availableVoices=all;
+      const preferred=availableVoices.find(voice=>/natural|neural|enhanced|premium/i.test(voice.name))
+        ||availableVoices.find(voice=>/microsoft.*(aria|jenny|guy|sonia|ryan)|google us english/i.test(voice.name))
+        ||availableVoices.find(voice=>voice.default)
+        ||availableVoices[0];
+      const previous=voiceSelect.value;
+      voiceSelect.innerHTML='';
+      availableVoices.forEach((voice,index)=>{
+        const option=document.createElement('option');
+        option.value=String(index);
+        option.textContent=voice.name+' ('+voice.lang+')';
+        voiceSelect.appendChild(option);
+      });
+      const retained=availableVoices.findIndex(voice=>voice.voiceURI===previous);
+      const preferredIndex=availableVoices.indexOf(preferred);
+      voiceSelect.value=String(retained>=0?retained:preferredIndex);
+      selectedVoice=availableVoices[Number(voiceSelect.value)]||null;
+    }
+    voiceSelect.addEventListener('change',function(){selectedVoice=availableVoices[Number(voiceSelect.value)]||null;});
+    loadVoices();
+    if(typeof synth.addEventListener==='function')synth.addEventListener('voiceschanged',loadVoices);
+    else synth.onvoiceschanged=loadVoices;
     let utterances=[],finished=0,stopped=false,paused=false;
     function announce(message){status.textContent=message;}
     function controls(state){
@@ -51,7 +79,8 @@
       if(!utterances.length){announce('There is no reading text available on this page.');return;}
       finished=0;stopped=false;paused=false;
       utterances.forEach((utterance)=>{
-        utterance.rate=0.95;
+        utterance.rate=0.96;
+        if(selectedVoice)utterance.voice=selectedVoice;
         utterance.onend=function(){
           if(stopped)return;
           finished++;
@@ -62,7 +91,7 @@
         utterance.onerror=function(event){
           if(stopped||event.error==='canceled'||event.error==='interrupted')return;
           stopped=true;synth.cancel();controls('idle');
-          announce('Your iPhone stopped the reading. Tap Listen to start again.');
+          announce('Your browser stopped the reading. Tap Listen to start again.');
         };
       });
       controls('playing');
