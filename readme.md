@@ -11,7 +11,8 @@ https://brad-hobbswd.github.io/love-that-covers-lgbtqia/
 
 - Home
 - About the Book
-- Forward and Preface
+- Dedication
+- Dedication, Preface, and Forward
 - Stories and five chapters
 - Resources
 - Prayer
