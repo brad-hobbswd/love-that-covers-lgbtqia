@@ -58,5 +58,5 @@
 </main>
 <div id="footer"></div>
 <script>fetch('/love-that-covers-lgbtqia/layout.html').then(res=>res.text()).then(data=>{const parser=new DOMParser();const doc=parser.parseFromString(data,'text/html');document.getElementById('header').innerHTML=doc.querySelector('#site-header').innerHTML;document.getElementById('footer').innerHTML=doc.querySelector('#site-footer').innerHTML;});</script>
-</body>
+<script src="reading-tools.js" defer></script></body>
 </html>
