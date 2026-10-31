@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dedication | Love That Covers LGBTQIA+ Edition</title>
+<meta name="description" content="The dedication page for Love That Covers LGBTQIA+ Edition by Bradley Hobbs.">
+<link rel="stylesheet" href="lgbtq-theme.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+.dedication{min-height:68vh;display:grid;place-items:center;padding:64px 20px}
+.dedication-inner{width:min(760px,100%);margin:auto;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:clamp(38px,7vw,78px)}
+.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.2em;font:700 .76rem Inter,Arial,sans-serif}
+h1{font:600 clamp(2.7rem,6vw,4.4rem)/1.1 'Playfair Display',Georgia,serif;color:var(--accent-dark);margin:14px 0 34px}
+.dedication-copy{font:400 clamp(1.08rem,2vw,1.25rem)/2 Georgia,serif;color:var(--text,#40352f)}
+.dedication-copy p{margin:0 0 24px}.dedication-copy p:last-child{margin-bottom:0}
+.signature{margin-top:38px;color:var(--accent-dark);font:italic 1.05rem Georgia,serif}
+.nav{margin-top:34px;display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.nav a{display:inline-block;color:var(--accent-dark);text-decoration:none;border:1px solid var(--line);padding:11px 18px;border-radius:999px;font:600 .92rem Inter,Arial,sans-serif}
+@media(max-width:600px){.dedication{padding:38px 14px}.dedication-inner{border-radius:22px;padding:36px 23px}.dedication-copy{line-height:1.85}}
+</style></head><body>
+<div id="header"></div><main><div class="rainbow-line"></div><section class="dedication"><article class="dedication-inner">
+<p class="eyebrow">With compassion and hope</p><h1>Dedication</h1>
+<div class="dedication-copy">
+<p>This book is dedicated to the LGBTQIA+ community and to every person who has ever carried the weight of rejection, shame, fear, or misunderstanding.</p>
+<p>To those who have felt unseen, unheard, or made to believe they must hide a part of their story to be worthy of love, may these pages remind you that your life has dignity, your story matters, and you deserve to be met with compassion.</p>
+<p>To every person searching for belonging, to those rebuilding trust after painful experiences, and to the people who choose to stand beside them with patience and kindness, this dedication is for you.</p>
+<p>May you find hope in the reminder that no wound makes you less worthy of care, no difficult chapter tells the whole of your story, and love can still reach the places where hurt has lived.</p>
+</div>
+<p class="signature">With hope, Bradley Hobbs</p>
+<nav class="nav" aria-label="Book opening pages"><a href="book.html">← Back to The Book</a><a href="preface.html">Continue to the Preface →</a></nav>
+</article></section></main><div id="footer"></div>
+<script>fetch('/love-that-covers-lgbtqia/layout.html').then(r=>r.text()).then(d=>{const x=new DOMParser().parseFromString(d,'text/html');document.getElementById('header').innerHTML=x.querySelector('#site-header').innerHTML;document.getElementById('footer').innerHTML=x.querySelector('#site-footer').innerHTML}).catch(()=>{});</script>
+</body></html>
