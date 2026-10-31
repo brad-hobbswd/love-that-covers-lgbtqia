@@ -25,7 +25,10 @@
       if(!all.length)return;
       availableVoices=all.filter(voice=>/^en([_-]|$)/i.test(voice.lang));
       if(!availableVoices.length)availableVoices=all;
-      const preferred=availableVoices.find(voice=>/natural|neural|enhanced|premium/i.test(voice.name))
+      // Prefer the author's requested Microsoft Andrew online natural English voice.
+      const preferred=availableVoices.find(voice=>/microsoft.*andrew.*online.*natural.*english/i.test(voice.name))
+        ||availableVoices.find(voice=>/andrew.*online.*natural.*english/i.test(voice.name))
+        ||availableVoices.find(voice=>/natural|neural|enhanced|premium/i.test(voice.name))
         ||availableVoices.find(voice=>/microsoft.*(aria|jenny|guy|sonia|ryan)|google us english/i.test(voice.name))
         ||availableVoices.find(voice=>voice.default)
         ||availableVoices[0];
