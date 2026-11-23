@@ -2121,3 +2121,13 @@ footer.footer .footer-checker,
 }
 .listen-voice:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 @media(max-width:760px){.listen-voice-label{display:none!important}}
+
+/* Love That Covers edition cross-links */
+.love-covers-collection{margin:30px auto 22px;padding:23px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;max-width:920px}
+.ltc-series-label{font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;color:var(--accent-dark,var(--gold));font-weight:800}
+.ltc-series-copy{margin:10px auto 18px;color:var(--muted);max-width:650px}
+.ltc-series-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.ltc-series-links a{display:block;min-width:220px;padding:13px 18px;border:1px solid var(--line);border-radius:10px;color:var(--accent-dark,var(--wine));text-decoration:none;font-weight:700;transition:transform .2s,background .2s}
+.ltc-series-links a:hover{transform:translateY(-2px);background:rgba(216,182,95,.10)}
+.ltc-series-links a span{display:block;font-size:.78rem;font-weight:500;color:var(--muted);margin-top:5px}
+@media(max-width:640px){.ltc-series-links{display:grid;grid-template-columns:1fr}.ltc-series-links a{min-width:0}}
